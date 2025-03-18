@@ -9,7 +9,7 @@
     "image": "/djb.webp",
     "email": "hello@davebeach.me",
     "url": "https://www.linkedin.com/in/itsdavebeach/",
-    "summary": "I’m a dedicated and curious full-stack developer with a proven track record of delivering high-quality, award-winning websites for global brands like Toyota and Lexus. With experience leading teams on large-scale projects, I combine strategic planning, strong organizational skills, and technical expertise to ensure projects are completed on time and beyond expectations. I'm always exploring new technologies to stay ahead of industry trends, driven by a passion for continuous learning and growth. If you're looking for a skilled developer who can tackle complex challenges with precision and creativity, let's connect.",
+    "summary": "I’m a dedicated full-stack developer with a proven track record of delivering high-quality, award-winning websites and web applications for global brands like Toyota and Lexus. With experience leading teams on large-scale projects, I combine strategic planning, strong organizational skills, and technical expertise to ensure projects are completed on time and beyond expectations. I'm always exploring new technologies to stay ahead of industry trends, driven by a passion for continuous learning and growth. If you're looking for a skilled developer who can tackle complex challenges with precision and creativity, let's connect.",
     "theme": "orange",
     "location": {
       "address": "Kitchener",
@@ -73,113 +73,276 @@
   ],
   "work": [
     {
-      "name": "Zener Soft Consulting",
-      "position": "Front-end Developer",
-      "location_type": "Remote",
-      "location": "ES",
-      "url": "https://www.linkedin.com/company/aitor-pelaez-zenerconsulting-com/",
-      "startDate": "2023-07-03",
+      "name": "Northern Venture Drone Services",
+      "position": "Founder",
+      "location_type": "Hybrid",
+      "location": "CA",
+      "url": null,
+      "startDate": "2024-03-01",
       "endDate": null,
-      "summary": "Experienced in developing high-complexity, scalable, data-driven front-end projects with a focus on performance, user experience, and system integration. Participated in development of a complex Micro-services Hexagonal DDD Spring Java project.",
-      "highlights": [
-        "Developed a data-intensive Angular project for internal use in the national healthcare system, focusing on managing complex data sets and implementing business logic."
-      ],
+      "summary": "Founder and lead drone pilot of a specialized aerial services company, delivering innovative solutions across agriculture, mining, construction, utilities, wildlife conservation, historical preservation, and more.",
       "responsibilities": [
-        "Developed and maintained front-end projects, ensuring scalability, performance, clean code, efficient architecture and robust user experiences.",
-        "Collaborated with cross-functional teams of developers, designers, and project managers to deliver high-quality solutions.",
-        "Ensured code quality and optimized front-end performance to meet user needs and business objectives.",
-        "Managed complex, data-intensive projects, ensuring smooth integration of business logic and user interfaces.",
-        "Designed and developed highly reactive components and workflows to improve application efficiency and user interaction."
+        "Lead drone operations for aerial surveys, photogrammetry, 3D mapping, and infrastructure inspections.",
+        "Collaborate with stakeholders to deliver actionable insights and data-driven decision-making through advanced drone technology.",
+        "Manage business development, client acquisition, and strategic partnerships to expand market reach in diverse industries.",
+        "Ensure compliance with aviation regulations and safety standards, including Transport Canada certifications.",
+        "Analyze and process aerial data to provide comprehensive reports and high-resolution visualizations."
       ],
-      "achievements": [
-        "Optimized front-end performance by resolving critical issues, improving page load times, and enhancing user experience.",
-        "Developed an internal tool to streamline client-owned code documentation, introducing interactive design guidelines and testable components.",
-        "Created a highly complex Angular application for the national healthcare system, successfully handling large-scale data and implementing intricate business logic.",
-        "Built reusable and scalable Vue components for a multinational client, ensuring consistency and improving code quality across multiple platforms."
-      ],
+      "achievements": null,
       "skills": {
-        "HTML5": "simple-icons:html5",
-        "CSS3": "ri:css3-fill",
-        "SCSS": "simple-icons:sass",
-        "Bootstrap": "simple-icons:bootstrap",
-        "JavaScript ECMA6+": "simple-icons:javascript",
-        "TypeScript": "simple-icons:typescript",
-        "Vue": "mdi:vuejs",
-        "Angular": "simple-icons:angular",
-        "Jasmine": "simple-icons:jasmine",
-        "Jest": "simple-icons:jest",
-        "Java": "ri:java-line",
-        "Spring": "simple-icons:spring",
-        "NodeJS": "ri:nodejs-line",
-        "Postman": "simple-icons:postman",
-        "i18n": "simple-icons:i18next",
-        "Git": "mdi:git",
-        "GitHub": "mdi:github",
-        "Figma": "simple-icons:figma",
-        "Jira": "simple-icons:jira",
-        "Kubernetes": "simple-icons:kubernetes",
-        "Docker": "simple-icons:docker"
+        "DJI drones": "simple-icons:dji",
+        "RTK GPS": "mdi:crosshairs-gps",
+        "Photogrammetry software": "mdi:rotate-3d",
+        "GIS mapping": "simple-icons:arcgis",
+        "Aerial thermography": "mdi:home-thermometer",
+        "Data analysis": "ri:database-line",
+        "Project management": "mdi:target-arrow",
+        "Client relations": "ri:account-circle-fill"
       }
     },
     {
-      "name": "Zener Soft Consulting",
-      "position": "Front-end Developer",
-      "location_type": "Remote",
-      "location": "ES",
-      "url": "https://www.linkedin.com/company/aitor-pelaez-zenerconsulting-com/",
-      "startDate": "2023-07-03",
-      "endDate": null,
-      "summary": "Experienced in developing high-complexity, scalable, data-driven front-end projects with a focus on performance, user experience, and system integration. Participated in development of a complex Micro-services Hexagonal DDD Spring Java project.",
-      "highlights": [
-        "Developed a data-intensive Angular project for internal use in the national healthcare system, focusing on managing complex data sets and implementing business logic."
-      ],
+      "name": "Him & Her Inc.",
+      "position": "Technical Lead, Development",
+      "location_type": "Hybrid",
+      "location": "CA",
+      "url": "https://himandher.ca/",
+      "startDate": "2023-05-01",
+      "endDate": "2024-02-01",
+      "summary": null,
       "responsibilities": [
-        "Developed and maintained front-end projects, ensuring scalability, performance, clean code, efficient architecture and robust user experiences.",
-        "Collaborated with cross-functional teams of developers, designers, and project managers to deliver high-quality solutions.",
-        "Ensured code quality and optimized front-end performance to meet user needs and business objectives.",
-        "Managed complex, data-intensive projects, ensuring smooth integration of business logic and user interfaces.",
-        "Designed and developed highly reactive components and workflows to improve application efficiency and user interaction."
+        "Managed a cross-functional team of junior to senior developers and external contractors, fostering skill development and career growth through personalized one-on-one meetings.",
+        "Led a high-impact project for Raffi Jewellers, resulting in the successful development of a large-scale e-commerce experience that gained recognition from Rolex, serving as a benchmark for adherence to strict brand guidelines within the jewelry industry.",
+        "Implemented strategic measures to streamline team processes, including the elimination of technical debt and the development of a roadmap for future projects, resulting in enhanced productivity and efficiency for upcoming websites.",
+        "Collaborated closely with clients and external vendors to architect and execute a large-scale e-commerce site, providing technical guidance to ensure project success.",
+        "Provided ongoing technical guidance and mentoring to the team, fostering a collaborative and innovative work environment while achieving project objectives and delivering high-quality work."
       ],
-      "achievements": [
-        "Optimized front-end performance by resolving critical issues, improving page load times, and enhancing user experience.",
-        "Developed an internal tool to streamline client-owned code documentation, introducing interactive design guidelines and testable components.",
-        "Created a highly complex Angular application for the national healthcare system, successfully handling large-scale data and implementing intricate business logic.",
-        "Built reusable and scalable Vue components for a multinational client, ensuring consistency and improving code quality across multiple platforms."
-      ],
+      "achievements": null,
       "skills": {
+        "Leadership": "ri:team-fill",
         "HTML5": "simple-icons:html5",
         "CSS3": "ri:css3-fill",
         "SCSS": "simple-icons:sass",
-        "Bootstrap": "simple-icons:bootstrap",
         "JavaScript ECMA6+": "simple-icons:javascript",
         "TypeScript": "simple-icons:typescript",
-        "Vue": "mdi:vuejs",
-        "Angular": "simple-icons:angular",
-        "Jasmine": "simple-icons:jasmine",
-        "Jest": "simple-icons:jest",
-        "Java": "ri:java-line",
-        "Spring": "simple-icons:spring",
         "NodeJS": "ri:nodejs-line",
-        "Postman": "simple-icons:postman",
-        "i18n": "simple-icons:i18next",
-        "Git": "mdi:git",
-        "GitHub": "mdi:github",
         "Figma": "simple-icons:figma",
-        "Jira": "simple-icons:jira",
-        "Kubernetes": "simple-icons:kubernetes",
-        "Docker": "simple-icons:docker"
+        "PostgreSQL": "simple-icons:postgresql"
+      }
+    },
+    {
+      "name": "SkyWatch",
+      "position": "Team Lead, Front End Engineering",
+      "location_type": "Hybrid",
+      "location": "CA",
+      "url": "https://skywatch.com/",
+      "startDate": "2020-01-10",
+      "endDate": "2023-02-01",
+      "summary": null,
+      "responsibilities": [
+        "Architected Angular-based front-end projects for multiple apps, leveraging NgRx and AWS in a monorepo pattern",
+        "Mentored team members with tailored approaches to improve individual productivity and well-being",
+        "Spearheaded front-end and design team recruitment, interviewing and selecting candidates.",
+        "Led numerous dev process improvements, such as design systems, testing procedures, and CI/CD optimization",
+        "Initiated company-wide procedures, processes, and events to boost teamwork, communication, and efficiency",
+        "Ensured on-time and well-organized projects by working closely with senior leadership, design, product, and customer success"
+      ],
+      "achievements": null,
+      "skills": {
+        "Leadership": "ri:team-fill",
+        "HTML5": "simple-icons:html5",
+        "CSS3": "ri:css3-fill",
+        "Angular": "simple-icons:angular",
+        "RxJS": "simple-icons:reactivex",
+        "TypeScript": "simple-icons:typescript",
+        "NodeJS": "ri:nodejs-line",
+        "Git": "mdi:git",
+        "Python": "simple-icons:python",
+        "Docker": "mdi:docker",
+        "AWS": "simple-icons:amazonaws",
+        "Figma": "simple-icons:figma",
+        "PostgreSQL": "simple-icons:postgresql"
+      }
+    },
+    {
+      "name": "Saatchi and Saatchi Canada (TPM Division)",
+      "position": "Senior Developer",
+      "location_type": "Hybrid",
+      "location": "CA",
+      "url": "https://www.saatchi.ca/",
+      "startDate": "2013-11-10",
+      "endDate": "2020-02-10",
+      "summary": null,
+      "responsibilities": [
+        "Played a key role in redesigns for Toyota and Lexus websites, ranked #1 in JD Power for OEM sites and were Canada's 1st responsive auto sites",
+        "Designed and implemented software and hardware to streamline the contractor orientation process at Toyota Motor Manufacturing Canada (TMMC) facilities",
+        "Led migration of TMMC intranet applications from legacy code to a modern tech stack",
+        "Architected tech stacks with Angular, LESS, Java/Struts, Freemarker, Laravel, and WordPress for projects",
+        "Spearheaded company-wide switch from waterfall to agile model, onboarded non-technical team members, and improved development efficiency"
+      ],
+      "achievements": null,
+      "skills": {
+        "Leadership": "ri:team-fill",
+        "AngularJS": "simple-icons:angularjs",
+        "LESS": "simple-icons:less",
+        "Java": "ri:java-line",
+        "WordPress": "simple-icons:wordpress"
+      }
+    },
+    {
+      "name": "TunnelBear Inc.",
+      "position": "Freelance Web Developer",
+      "location_type": "Remote",
+      "location": "CA",
+      "url": "https://www.tunnelbear.com/",
+      "startDate": "2012-09-01",
+      "endDate": "2015-05-01",
+      "summary": null,
+      "responsibilities": [
+        "Streamlined subscription process by building a user dashboard and payment system with Stripe.js",
+        "Enhanced user experience with engaging animations using CSS3 & jQuery for account upgrade/downgrade experience",
+        "Seamlessly integrated ZenDesk support into TunnelBear website for improved user help experience"
+      ],
+      "achievements": null,
+      "skills": {
+        "HTML5": "simple-icons:html5",
+        "CSS3": "ri:css3-fill",
+        "Stripe": "simple-icons:stripe",
+        "JavaScript": "simple-icons:javascript",
+        "ZenDesk": "simple-icons:zendesk"
+      }
+    },
+    {
+      "name": "TPM Communications",
+      "position": "Senior Developer Contractor",
+      "location_type": "Hybrid",
+      "location": "CA",
+      "url": null,
+      "startDate": "2010-06-01",
+      "endDate": "2013-12-01",
+      "summary": null,
+      "responsibilities": null,
+      "achievements": null,
+      "skills": {
+        "XHTML": "simple-icons:html5",
+        "LESS": "simple-icons:less",
+        "Java": "ri:java-line",
+        "WordPress": "simple-icons:wordpress"
+      }
+    },
+    {
+      "name": "Sesame Communications",
+      "position": "Freelance Developer",
+      "location_type": "Remote",
+      "location": "US",
+      "url": "https://www.sesamecommunications.com/",
+      "startDate": "2009-09-01",
+      "endDate": "2010-09-10",
+      "summary": null,
+      "responsibilities": [
+        "Developed efficient and standards-compliant websites for dental/orthodontic industry with XHTML, CSS, JavaScript, and PHP",
+        "Designed unique brand identities and web presence for dental providers, differentiating them in competitive markets"
+      ],
+      "achievements": null,
+      "skills": {
+        "XHTML": "simple-icons:html5",
+        "LESS": "simple-icons:less",
+        "JavaScript": "simple-icons:javascript",
+        "PHP": "simple-icons:php"
+      }
+    },
+    {
+      "name": "Blast Radius",
+      "position": "Lead Interface Developer Contractor",
+      "location_type": "Hybrid",
+      "location": "CA",
+      "url": null,
+      "startDate": "2008-01-10",
+      "endDate": "2010-08-01",
+      "summary": null,
+      "responsibilities": [
+        "Designed and coded engaging pages for Scotts Miracle-Gro website with XHTML/CSS and JavaScript",
+        "Managed interface developers to deliver a CMS for Scotts to manage their web properties efficiently"
+      ],
+      "achievements": null,
+      "skills": {
+        "XHTML": "simple-icons:html5",
+        "LESS": "simple-icons:less",
+        "JavaScript": "simple-icons:javascript",
+        "PHP": "simple-icons:php"
+      }
+    },
+    {
+      "name": "Henderson Bas",
+      "position": "Interface Developer, Contract",
+      "location_type": "Hybrid",
+      "location": "CA",
+      "url": null,
+      "startDate": "2008-08-01",
+      "endDate": "2009-01-01",
+      "summary": null,
+      "responsibilities": [
+        "Accelerated website updates for Nintendo, Molson Canadian, Coca-Cola, and Mercedes-Benz by creating a highly efficient templating system"
+      ],
+      "achievements": null,
+      "skills": {
+        "XHTML": "simple-icons:html5",
+        "LESS": "simple-icons:less",
+        "JavaScript": "simple-icons:javascript",
+        "PHP": "simple-icons:php"
+      }
+    },
+    {
+      "name": "ESAB",
+      "position": "Freelance Developer",
+      "location_type": "Remote",
+      "location": "US",
+      "url": "https://esab.com/",
+      "startDate": "2008-03-01",
+      "endDate": "2008-10-01",
+      "summary": null,
+      "responsibilities": [
+        "Developed websites for multiple ESAB brands including PowerCut and FastTrack",
+        "Created new designs for new pages and microsites that adhered to established brand guidelines"
+      ],
+      "achievements": null,
+      "skills": {
+        "XHTML": "simple-icons:html5",
+        "LESS": "simple-icons:less",
+        "JavaScript": "simple-icons:javascript",
+        "PHP": "simple-icons:php"
+      }
+    },
+    {
+      "name": "Cleanpage",
+      "position": "Freelance Developer",
+      "location_type": "Remote",
+      "location": "US",
+      "url": null,
+      "startDate": "2006-08-01",
+      "endDate": "2008-09-10",
+      "summary": null,
+      "responsibilities": [
+        "Designed and developed websites for local businesses and organizations",
+        "Worked with clients to determine site requirements and to create a design that would be exciting and informational"
+      ],
+      "achievements": null,
+      "skills": {
+        "XHTML": "simple-icons:html5",
+        "LESS": "simple-icons:less",
+        "JavaScript": "simple-icons:javascript",
+        "PHP": "simple-icons:php"
       }
     }
   ],
   "skills": [
     {
-      "name": "HTML",
+      "name": "HTML5",
       "icon": "simple-icons:html5",
       "level": "Advanced",
       "keywords": ["Web Development", "Frontend"]
     },
     {
-      "name": "CSS",
+      "name": "CSS3",
       "icon": "ri:css3-fill",
       "level": "Advanced",
       "keywords": ["Web Development", "Frontend", "Responsive Design"]
@@ -198,18 +361,7 @@
     {
       "name": "Tailwind",
       "icon": "mdi:tailwind",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "CSS Framework",
-        "Responsive Design"
-      ]
-    },
-    {
-      "name": "Bootstrap",
-      "icon": "simple-icons:bootstrap",
-      "level": "Intermediate",
+      "level": "Advanced",
       "keywords": [
         "Web Development",
         "Frontend",
@@ -252,10 +404,10 @@
       ]
     },
     {
-      "name": "Vue",
-      "icon": "mdi:vuejs",
-      "level": "Intermediate",
-      "keywords": ["Web Development", "Frontend", "JavaScript Library", "UI"]
+      "name": "React",
+      "icon": "simple-icons:react",
+      "level": "Advanced",
+      "keywords": ["Web Development", "Frontend", "JavaScript Framework", "UI"]
     },
     {
       "name": "Astro",
@@ -270,22 +422,10 @@
       "keywords": ["Web Development", "Backend", "JavaScript", "Server"]
     },
     {
-      "name": "PNPM",
-      "icon": "simple-icons:pnpm",
-      "level": "Beginner",
-      "keywords": ["Package Manager", "Web Development", "Frontend", "Backend"]
-    },
-    {
       "name": "Java",
       "icon": "ri:java-line",
       "level": "Beginner",
       "keywords": ["Web Development", "Backend"]
-    },
-    {
-      "name": "Spring",
-      "icon": "simple-icons:spring",
-      "level": "Beginner",
-      "keywords": ["Web Development", "Backend", "Java Framework"]
     },
     {
       "name": "MongoDB",
@@ -296,13 +436,13 @@
     {
       "name": "MySQL",
       "icon": "simple-icons:mysql",
-      "level": "Beginner",
+      "level": "Advanced",
       "keywords": ["Backend", "Databases", "SQL", "Relational Database"]
     },
     {
       "name": "PostgreSQL",
       "icon": "simple-icons:postgresql",
-      "level": "Beginner",
+      "level": "Advanced",
       "keywords": ["Backend", "Databases", "SQL", "Relational Database"]
     },
     {
@@ -320,25 +460,19 @@
     {
       "name": "AWS",
       "icon": "simple-icons:amazonaws",
-      "level": "Beginner",
+      "level": "Intermediate",
       "keywords": ["Cloud Computing", "Backend", "Infrastructure"]
     },
     {
       "name": "Docker",
       "icon": "mdi:docker",
-      "level": "Beginner",
+      "level": "Intermediate",
       "keywords": ["Virtual Environments", "Backend"]
-    },
-    {
-      "name": "Kubernetes",
-      "icon": "mdi:kubernetes",
-      "level": "Beginner",
-      "keywords": ["Virtual Environments", "Backend", "Container Orchestration"]
     },
     {
       "name": "Python",
       "icon": "simple-icons:python",
-      "level": "Beginner",
+      "level": "Intermediate",
       "keywords": ["Scripting", "Automation", "Web Development"]
     },
     {
@@ -348,39 +482,45 @@
       "keywords": ["Testing", "Web Development", "Frontend", "Backend"]
     },
     {
-      "name": "Jasmine",
-      "icon": "simple-icons:jasmine",
-      "level": "Intermediate",
-      "keywords": ["Testing", "Web Development", "Frontend", "Backend"]
-    },
-    {
-      "name": "Shell",
-      "icon": "simple-icons:shell",
-      "level": "Beginner",
-      "keywords": ["Scripting", "Automation"]
-    },
-    {
-      "name": "Linux",
-      "icon": "simple-icons:linux",
-      "level": "Beginner",
-      "keywords": ["OS", "Scripting", "Automation"]
-    },
-    {
-      "name": "Swagger",
-      "icon": "simple-icons:swagger",
-      "level": "Beginner",
-      "keywords": ["API", "Documentation", "Web Development", "Backend"]
-    },
-    {
       "name": "Postman",
       "icon": "simple-icons:postman",
       "level": "Intermediate",
       "keywords": ["API", "Testing", "Web Development", "Backend"]
     },
     {
+      "name": "PHP",
+      "icon": "simple-icons:php",
+      "level": "Advanced",
+      "keywords": ["Web Development", "Backend", "Scripting"]
+    },
+    {
+      "name": "Accessibility",
+      "icon": "mdi:accessibility",
+      "level": "Advanced",
+      "keywords": ["Web Development", "Frontend", "A11y", "WCAG"]
+    },
+    {
+      "name": "Unity",
+      "icon": "simple-icons:unity",
+      "level": "Intermediate",
+      "keywords": ["Game Development", "3D", "2D"]
+    },
+    {
+      "name": "Unreal Engine",
+      "icon": "simple-icons:unrealengine",
+      "level": "Intermediate",
+      "keywords": ["Game Development", "3D", "2D"]
+    },
+    {
+      "name": "Reality Capture",
+      "icon": "mdi:rotate-3d",
+      "level": "Intermediate",
+      "keywords": ["3D", "Photogrammetry", "3D Scanning"]
+    },
+    {
       "name": "Figma",
       "icon": "simple-icons:figma",
-      "level": "Beginner",
+      "level": "Intermediate",
       "keywords": ["Prototyping", "Web Development", "Frontend"]
     }
   ],
