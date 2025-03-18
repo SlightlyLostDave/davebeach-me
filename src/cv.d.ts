@@ -33,7 +33,7 @@ interface Location {
 }
 
 interface Profiles {
-  icon: string,
+  icon: string;
   network: string;
   username: string;
   url: URL;
@@ -52,7 +52,7 @@ interface Work {
 type DateStr = `${string}-${string}-${string}`;
 
 interface Skill {
-  icon: string,
+  icon: string;
   name: string;
   level: string;
   keywords: Array<string>;
