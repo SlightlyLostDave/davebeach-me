@@ -387,6 +387,12 @@
       ]
     },
     {
+      "name": "Three.js",
+      "icon": "simple-icons:threedotjs",
+      "level": "Intermediate",
+      "keywords": ["Web Development", "Frontend", "3D", "WebGL"]
+    },
+    {
       "name": "Angular",
       "icon": "simple-icons:angular",
       "level": "Advanced",
