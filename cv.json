@@ -422,6 +422,12 @@
       "keywords": ["Web Development", "Backend", "JavaScript", "Server"]
     },
     {
+      "name": "PHP",
+      "icon": "simple-icons:php",
+      "level": "Advanced",
+      "keywords": ["Web Development", "Backend", "Scripting"]
+    },
+    {
       "name": "Java",
       "icon": "ri:java-line",
       "level": "Beginner",
@@ -492,12 +498,6 @@
       "icon": "simple-icons:postman",
       "level": "Intermediate",
       "keywords": ["API", "Testing", "Web Development", "Backend"]
-    },
-    {
-      "name": "PHP",
-      "icon": "simple-icons:php",
-      "level": "Advanced",
-      "keywords": ["Web Development", "Backend", "Scripting"]
     },
     {
       "name": "Accessibility",
