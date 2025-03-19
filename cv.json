@@ -434,6 +434,12 @@
       "keywords": ["Web Development", "Backend"]
     },
     {
+      "name": "Python",
+      "icon": "simple-icons:python",
+      "level": "Intermediate",
+      "keywords": ["Scripting", "Automation", "Web Development"]
+    },
+    {
       "name": "MongoDB",
       "icon": "simple-icons:mongodb",
       "level": "Beginner",
@@ -452,16 +458,28 @@
       "keywords": ["Backend", "Databases", "SQL", "Relational Database"]
     },
     {
-      "name": "Git",
-      "icon": "mdi:git",
+      "name": "Shopify",
+      "icon": "simple-icons:shopify",
       "level": "Advanced",
-      "keywords": ["Version Control", "Collaboration", "Source Code"]
+      "keywords": ["Web Development", "E-commerce", "CMS"]
+    },
+    {
+      "name": "Contentful",
+      "icon": "simple-icons:contentful",
+      "level": "Advanced",
+      "keywords": ["Web Development", "CMS", "Headless CMS"]
     },
     {
       "name": "WordPress",
       "icon": "simple-icons:wordpress",
       "level": "Advanced",
       "keywords": ["Web Development", "CMS", "Blogging"]
+    },
+    {
+      "name": "Git",
+      "icon": "mdi:git",
+      "level": "Advanced",
+      "keywords": ["Version Control", "Collaboration", "Source Code"]
     },
     {
       "name": "GitHub",
@@ -480,12 +498,6 @@
       "icon": "mdi:docker",
       "level": "Intermediate",
       "keywords": ["Virtual Environments", "Backend"]
-    },
-    {
-      "name": "Python",
-      "icon": "simple-icons:python",
-      "level": "Intermediate",
-      "keywords": ["Scripting", "Automation", "Web Development"]
     },
     {
       "name": "Jest",
