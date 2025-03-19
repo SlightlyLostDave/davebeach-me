@@ -536,7 +536,7 @@
       "keywords": ["Game Development", "3D", "2D"]
     },
     {
-      "name": "Reality Capture",
+      "name": "RealityCapture",
       "icon": "mdi:rotate-3d",
       "level": "Intermediate",
       "keywords": ["3D", "Photogrammetry", "3D Scanning"]
@@ -558,7 +558,7 @@
     {
       "name": "CV Matching System",
       "isActive": true,
-      "description": "A propiertary code AI-driven CV matching system to connect the offer and the best candidates. Automates the recruitment process.",
+      "description": "A proprietary code AI-driven CV matching system to connect the offer and the best candidates. Automates the recruitment process.",
       "highlights": [
         "🎯 Tailored job opportunities",
         "✨ AI-driven complex workflows ",
