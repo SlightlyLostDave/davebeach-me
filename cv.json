@@ -452,6 +452,12 @@
       "keywords": ["Version Control", "Collaboration", "Source Code"]
     },
     {
+      "name": "WordPress",
+      "icon": "simple-icons:wordpress",
+      "level": "Advanced",
+      "keywords": ["Web Development", "CMS", "Blogging"]
+    },
+    {
       "name": "GitHub",
       "icon": "mdi:github",
       "level": "Advanced",
