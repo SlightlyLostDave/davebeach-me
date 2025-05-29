@@ -160,7 +160,8 @@
         "Docker": "mdi:docker",
         "AWS": "simple-icons:amazonaws",
         "Figma": "simple-icons:figma",
-        "PostgreSQL": "simple-icons:postgresql"
+        "PostgreSQL": "simple-icons:postgresql",
+        "Jest": "simple-icons:jest"
       }
     },
     {
