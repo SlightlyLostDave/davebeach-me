@@ -9,7 +9,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "deploy:vercel": "vercel deploy",
-    "deploy:cloudflare": "astro build && wrangler pages deploy ./dist"
+    "deploy:cloudflare": "astro build && wrangler pages deploy ./dist",
+    "commit": "cz"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "^6.3.2",
@@ -31,6 +32,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.4",
+    "cz-conventional-changelog": "^3.3.0",
     "daisyui": "^4.12.10",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
@@ -38,5 +40,10 @@
     "rimraf": "^6.0.1",
     "tailwind-scrollbar": "^3.1.0",
     "wrangler": "^3.80.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
