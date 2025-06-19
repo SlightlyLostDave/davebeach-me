@@ -261,8 +261,10 @@
       "endDate": "2010-08-01",
       "summary": null,
       "responsibilities": [
-        "Designed and coded engaging pages for Scotts Miracle-Gro website with XHTML/CSS and JavaScript",
-        "Managed interface developers to deliver a CMS for Scotts to manage their web properties efficiently"
+        "Led a team of interface developers in building a custom CMS for managing Scott’s Miracle-Gro web content",
+        "Designed and implemented full-stack architecture using XHTML, LESS, JavaScript, and PHP",
+        "Delivered multiple brand microsites with a focus on performance, scalability, and usability",
+        "Coordinated closely with stakeholders to align development with brand guidelines and marketing goals"
       ],
       "achievements": null,
       "skills": {
@@ -282,7 +284,10 @@
       "endDate": "2009-01-01",
       "summary": null,
       "responsibilities": [
-        "Accelerated website updates for Nintendo, Molson Canadian, Coca-Cola, and Mercedes-Benz by creating a highly efficient templating system"
+        "Developed a custom XHTML, LESS, JavaScript, and PHP-based templating system that increased page production efficiency by 4x",
+        "Led full-stack implementation across high-profile brand websites, including Nintendo, Molson Canadian, Coca-Cola, and Mercedes-Benz",
+        "Streamlined cross-team workflows by creating reusable components and scalable templates, improving consistency and maintainability",
+        "Collaborated closely with designers and back-end developers to deliver pixel-perfect, performance-optimized user experiences"
       ],
       "achievements": null,
       "skills": {
