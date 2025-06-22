@@ -78,7 +78,7 @@
       "location_type": "Hybrid",
       "location": "CA",
       "url": null,
-      "startDate": "2024-03-01",
+      "startDate": "2024-02-01",
       "endDate": null,
       "summary": "Founder and lead drone pilot of a specialized aerial services company, delivering innovative solutions across agriculture, mining, construction, utilities, wildlife conservation, historical preservation, and more.",
       "responsibilities": [
@@ -110,11 +110,10 @@
       "endDate": "2024-02-01",
       "summary": null,
       "responsibilities": [
-        "Managed a cross-functional team of junior to senior developers and external contractors, fostering skill development and career growth through personalized one-on-one meetings.",
-        "Led a high-impact project for Raffi Jewellers, resulting in the successful development of a large-scale e-commerce experience that gained recognition from Rolex, serving as a benchmark for adherence to strict brand guidelines within the jewelry industry.",
-        "Implemented strategic measures to streamline team processes, including the elimination of technical debt and the development of a roadmap for future projects, resulting in enhanced productivity and efficiency for upcoming websites.",
-        "Collaborated closely with clients and external vendors to architect and execute a large-scale e-commerce site, providing technical guidance to ensure project success.",
-        "Provided ongoing technical guidance and mentoring to the team, fostering a collaborative and innovative work environment while achieving project objectives and delivering high-quality work."
+        "Led a cross-functional team of developers and contractors, supporting growth through regular one-on-ones",
+        "Directed a high-impact e-commerce project for Raffi Jewellers, earning recognition from Rolex for brand excellence",
+        "Streamlined team workflows by reducing technical debt and creating project roadmaps, boosting efficiency",
+        "Partnered with clients and vendors to architect and deliver complex e-commerce platforms"
       ],
       "achievements": null,
       "skills": {
@@ -139,9 +138,9 @@
       "endDate": "2023-02-01",
       "summary": null,
       "responsibilities": [
-        "Architected Angular-based front-end projects for multiple apps, leveraging NgRx and AWS in a monorepo pattern",
+        "Architected Angular- and React-based front-end projects for multiple apps, leveraging NgRx and AWS in a monorepo pattern",
         "Mentored team members with tailored approaches to improve individual productivity and well-being",
-        "Spearheaded front-end and design team recruitment, interviewing and selecting candidates.",
+        "Spearheaded front-end and design team recruitment, interviewing and selecting candidates",
         "Led numerous dev process improvements, such as design systems, testing procedures, and CI/CD optimization",
         "Initiated company-wide procedures, processes, and events to boost teamwork, communication, and efficiency",
         "Ensured on-time and well-organized projects by working closely with senior leadership, design, product, and customer success"
@@ -199,9 +198,10 @@
       "endDate": "2015-05-01",
       "summary": null,
       "responsibilities": [
-        "Streamlined subscription process by building a user dashboard and payment system with Stripe.js",
-        "Enhanced user experience with engaging animations using CSS3 & jQuery for account upgrade/downgrade experience",
-        "Seamlessly integrated ZenDesk support into TunnelBear website for improved user help experience"
+        "Maintained and enhanced the marketing website for an early-stage VPN startup using XHTML, CSS3, and JavaScript",
+        "Designed and built a user subscription dashboard integrated with Stripe.js for seamless billing management",
+        "Created engaging, responsive UI with CSS animations to enhance user experience during subscription changes",
+        "Integrated Zendesk into the site to enable in-app customer support and improve user engagement"
       ],
       "achievements": null,
       "skills": {
