@@ -1,0 +1,29 @@
+---
+import '@styles/global.css';
+import CV from '@cv';
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+
+const { summary } = CV.basics;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>{title}</title>
+
+    <meta name="description" content={summary} />
+
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
