@@ -1,7 +1,12 @@
 @import 'tailwindcss';
 
+@theme {
+  --font-display: 'Cabin Variable', sans-serif;
+  --font-paragraph: 'Raleway Variable', sans-serif;
+}
+
 @layer base {
   body {
-    @apply scroll-smooth overflow-x-hidden;
+    @apply scroll-smooth overflow-x-hidden font-paragraph;
   }
 }
