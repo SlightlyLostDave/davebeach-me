@@ -4,6 +4,7 @@ import { useMediaQuery } from 'react-responsive';
 import HeroText from './HeroText.jsx';
 import ParallaxBackground from './ParallaxBackground.jsx';
 import { Astronaut } from './Astronaut.jsx';
+import { Spaceship } from './Spaceship.jsx';
 import { easing } from 'maath';
 import { Float } from '@react-three/drei';
 import { Suspense } from 'react';
@@ -23,8 +24,12 @@ const Hero = () => {
         <Canvas camera={{ position: [0, 1, 3] }}>
           <Suspense fallback={<Loader />}>
             <Float>
-              <Astronaut
+              {/* <Astronaut
                 scale={isMobile && 0.23}
+                position={isMobile && [0, -1.5, 0]}
+              /> */}
+              <Spaceship
+                scale={isMobile && 0.27}
                 position={isMobile && [0, -1.5, 0]}
               />
             </Float>
