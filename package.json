@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@astrojs/react": "^4.3.0",
-    "@astrojs/vercel": "^8.2.4",
+    "@astrojs/vercel": "^8.2.5",
     "@emailjs/browser": "^4.4.1",
     "@fontsource-variable/cabin": "^5.2.6",
     "@fontsource-variable/raleway": "^5.2.6",
