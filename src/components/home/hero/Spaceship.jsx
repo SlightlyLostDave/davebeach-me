@@ -27,9 +27,9 @@ export function Spaceship(props) {
       ref={group}
       {...props}
       dispose={null}
-      rotation={[-Math.PI / 2, 0.2, -0.9]}
+      rotation={[-Math.PI / 2, 0.1, -1.12]}
       scale={props.scale || 0.4}
-      position={props.position || [1.3, -0.7, 0]}
+      position={props.position || [1.3, 0.5, 0]}
     >
       <group>
         <group rotation={[Math.PI / 2, 0, 0]}>
