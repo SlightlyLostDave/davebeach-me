@@ -1,6 +1,7 @@
 import { basics } from '@cv';
 import Globe from './Globe';
 import CopyEmailButton from './CopyEmailButton';
+import { Frameworks } from './Frameworks';
 
 const { summary } = basics;
 
@@ -55,7 +56,17 @@ const About = () => {
         </div>
 
         {/* Grid 5 */}
-        <div className="flex items-end grid-default-color grid-5"></div>
+        <div className="flex items-end grid-default-color grid-5">
+          <div className="z-10 w-[50%]">
+            <p className="head-text">Tech Stack</p>
+            <div className="sub-text">
+              I use the right tools for the job, drawing on years of full-stack
+              experience to build software that’s stable, scalable, and built to
+              last.
+            </div>
+          </div>
+          <Frameworks />
+        </div>
       </div>
     </section>
   );
