@@ -1,5 +1,6 @@
 import { basics } from '@cv';
 import Globe from './Globe';
+import CopyEmailButton from './CopyEmailButton';
 
 const { summary } = basics;
 
@@ -44,7 +45,14 @@ const About = () => {
         </div>
 
         {/* Grid 4 */}
-        <div className="flex items-end grid-special-color grid-4"></div>
+        <div className="flex items-end grid-special-color grid-4">
+          <div className="flex flex-col items-center justify-center gap-4 size-full">
+            <p className="text-center head-text">
+              Ready to build something meaningful together?
+            </p>
+            <CopyEmailButton />
+          </div>
+        </div>
 
         {/* Grid 5 */}
         <div className="flex items-end grid-default-color grid-5"></div>

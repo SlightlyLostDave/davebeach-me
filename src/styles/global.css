@@ -1,24 +1,28 @@
 @import 'tailwindcss';
-@plugin "daisyui";
+/* @plugin "daisyui"; */
 
 @theme {
+  --color-primary: #120903;
   --color-midnight: #06091f;
   --color-navy: #161a31;
   --color-bistro: #38281e; /* Indigo */
   --color-kobicha: #654125; /* Storm */
   --color-aqua: #33c2cc;
   --color-mint: #57db96;
-  --color-royal: #5c33cc;
-  --color-lavender: #7a57db;
+  --color-caramel: #cc7533; /* Royal */
+  --color-persian-orange: #db9158; /* Lavender */
   --color-fuchsia: #ca2f8c;
   --color-orange: #cc6033;
   --color-sand: #d6995c;
   --color-coral: #ea4884;
+  --color-base-100: #090909;
+  --color-base-200: #161616;
+  --color-base-300: #242424;
   --font-display: 'Cabin Variable', sans-serif;
   --font-paragraph: 'Raleway Variable', sans-serif;
 }
 
-@plugin "daisyui/theme" {
+/* @plugin "daisyui/theme" {
   name: 'dark';
   default: true;
   prefersdark: true;
@@ -51,11 +55,11 @@
   --border: 1px;
   --depth: 0;
   --noise: 0;
-}
+} */
 
 @layer base {
   body {
-    @apply scroll-smooth overflow-x-hidden font-paragraph text-white;
+    @apply scroll-smooth overflow-x-hidden font-paragraph bg-base-100 text-white;
   }
 
   .c-space {
@@ -117,7 +121,7 @@
   }
 
   .grid-special-color {
-    @apply p-6 bg-gradient-to-b from-royal to-lavender rounded-2xl;
+    @apply p-6 bg-gradient-to-b from-caramel to-sand rounded-2xl;
   }
 
   .grid-black-color {

@@ -1,9 +1,14 @@
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
+import { Icon, loadIcons } from '@iconify/react';
+
+import { basics } from '@cv';
 
 const CopyEmailButton = () => {
   const [copied, setCopied] = useState(false);
-  const email = 'Your Email Address';
+  const email = basics.email;
+
+  loadIcons(['mdi:checkbox-multiple-outline']);
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(email);
@@ -30,7 +35,7 @@ const CopyEmailButton = () => {
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.1, ease: 'easeInOut' }}
           >
-            <img src="assets/copy-done.svg" className="w-5" alt="copy Icon" />
+            <Icon icon="mdi:checkbox-multiple-outline" width="1.25rem" />
             Email has Copied
           </motion.p>
         ) : (
@@ -42,7 +47,7 @@ const CopyEmailButton = () => {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.1 }}
           >
-            <img src="assets/copy.svg" className="w-5" alt="copy icon" />
+            <Icon icon="mdi:content-copy" width="1.25rem" />
             Copy Email Address
           </motion.p>
         )}

@@ -1,6 +1,7 @@
 {
   "basics": {
     "name": "Dave Beach",
+    "email": "hello@davebeach.me",
     "heroText1": "Hi, I’m Dave",
     "heroText2": "A freelance developer that gets shit done",
     "summary": "I’m a senior full-stack developer with over 17 years of experience building everything from satellite imaging platforms to digital ecosystems for global brands. I combine technical precision with big-picture thinking to help mission-driven teams bring meaningful ideas to life. Whether you need a creative collaborator to launch a fast, resilient web app or a lead engineer to guide your team through complex challenges, I bring clarity, care, and the mindset of a grounded idealist with a bias for action."
