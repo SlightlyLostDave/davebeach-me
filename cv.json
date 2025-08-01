@@ -6,6 +6,29 @@
     "heroText2": "A freelance developer that gets shit done",
     "summary": "I’m a senior full-stack developer with over 17 years of experience building everything from satellite imaging platforms to digital ecosystems for global brands. I combine technical precision with big-picture thinking to help mission-driven teams bring meaningful ideas to life. Whether you need a creative collaborator to launch a fast, resilient web app or a lead engineer to guide your team through complex challenges, I bring clarity, care, and the mindset of a grounded idealist with a bias for action."
   },
+  "social": [
+    {
+      "network": "LinkedIn",
+      "icon": "mdi:linkedin",
+      "color": "#0066C2",
+      "username": "Dave Beach",
+      "url": "https://www.linkedin.com/in/itsdavebeach/"
+    },
+    {
+      "network": "GitHub",
+      "icon": "mdi:github",
+      "color": "#929AAB",
+      "username": "SlightlyLostDave",
+      "url": "https://github.com/SlightlyLostDave"
+    },
+    {
+      "network": "Email",
+      "icon": "mdi:email-outline",
+      "color": "#D44638",
+      "username": "Dave Beach",
+      "url": "mailto:hello@davebeach.me"
+    }
+  ],
   "work": [
     {
       "name": "Northern Venture Drone Services",
