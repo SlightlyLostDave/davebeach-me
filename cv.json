@@ -10,21 +10,18 @@
     {
       "network": "LinkedIn",
       "icon": "mdi:linkedin",
-      "color": "#0066C2",
       "username": "Dave Beach",
       "url": "https://www.linkedin.com/in/itsdavebeach/"
     },
     {
       "network": "GitHub",
       "icon": "mdi:github",
-      "color": "#929AAB",
       "username": "SlightlyLostDave",
       "url": "https://github.com/SlightlyLostDave"
     },
     {
       "network": "Email",
       "icon": "mdi:email-outline",
-      "color": "#D44638",
       "username": "Dave Beach",
       "url": "mailto:hello@davebeach.me"
     }
