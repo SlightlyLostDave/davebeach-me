@@ -1,4 +1,5 @@
 import { basics } from '@cv';
+import Globe from './Globe';
 
 const { summary } = basics;
 
@@ -18,12 +19,33 @@ const About = () => {
           </div>
           <div className="absolute inset-x-0 pointer-events-none -bottom-4 h-1/2 sm:h-2/3 bg-gradient-to-t from-bistro"></div>
         </div>
+
         {/* Grid 2 */}
-        <div className="flex items-end grid-default-color grid-2"></div>
+        <div className="grid-default-color grid-2">
+          <div className="flex items-center justify-center w-full h-full">
+            <p className="flex items-end text-5xl text-stone-500">
+              CODE IS CRAFT
+            </p>
+          </div>
+        </div>
+
         {/* Grid 3 */}
-        <div className="flex items-end grid-black-color grid-3"></div>
+        <div className="grid-black-color grid-3">
+          <div className="z-10 w-[60%]">
+            <p className="head-text">Time Zone</p>
+            <p className="sub-text">
+              Working from Kitchener, Ontario, and open to remote projects
+              worldwide
+            </p>
+            <figure className="absolute left-[30%] top-[10%]">
+              <Globe />
+            </figure>
+          </div>
+        </div>
+
         {/* Grid 4 */}
         <div className="flex items-end grid-special-color grid-4"></div>
+
         {/* Grid 5 */}
         <div className="flex items-end grid-default-color grid-5"></div>
       </div>

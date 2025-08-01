@@ -67,7 +67,11 @@
   }
 
   .text-heading {
-    @apply font-display font-bold text-3xl md:text-4xl;
+    @apply font-display font-bold text-3xl md:text-4xl uppercase;
+  }
+
+  .head-text {
+    @apply font-display mt-2 mb-2 text-xl;
   }
 
   .sub-text {
@@ -88,10 +92,6 @@
   }
 
   /* About Section */
-  .grid-1 {
-    @apply row-span-6 md:col-span-3 h-[40rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
-  }
-
   .grid-1 {
     @apply row-span-2 md:col-span-3 h-[15rem] md:h-full relative overflow-hidden hover:-translate-y-1 duration-200;
   }
