@@ -32,7 +32,7 @@ export const Timeline = ({ data }) => {
             className="flex justify-start pt-10 md:pt-40 md:gap-10"
           >
             <div className="sticky z-40 flex flex-col items-center self-start max-w-xs md:flex-row top-40 lg:max-w-sm md:w-full">
-              <div className="absolute flex items-center justify-center w-10 h-10 rounded-full -left-[15px] bg-midnight">
+              <div className="absolute flex items-center justify-center w-10 h-10 rounded-full -left-[15px] bg-base-200">
                 <div className="w-4 h-4 p-2 border rounded-full bg-neutral-800 border-neutral-700" />
               </div>
               <div className="flex-col hidden gap-2 text-xl font-bold md:flex md:pl-20 md:text-2xl text-neutral-300">
