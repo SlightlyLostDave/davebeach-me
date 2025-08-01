@@ -1,13 +1,15 @@
 ---
+import Navbar from '@/components/Navbar.jsx';
 import Layout from '@/layouts/Layout.astro';
-import CV, { basics } from '@cv';
+
+import { basics } from '@cv';
 
 const { name } = basics;
 ---
 
 <Layout title={`${name} - Portfolio`}>
   <div class="container mx-auto max-w-7xl">
-    {/* navbar */}
+    <Navbar client:load />
     {/* hero */}
     {/* about */}
     {/* projects */}
@@ -15,6 +17,5 @@ const { name } = basics;
     {/* testimonials */}
     {/* contact */}
     {/* footer */}
-    App
   </div>
 </Layout>
