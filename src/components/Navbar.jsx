@@ -49,7 +49,7 @@ const Navbar = () => {
             {name}
           </a>
           <button
-            class="flex cursor-pointer text-neutral-400 hover:text-white focus:outline-none sm:hidden"
+            className="flex cursor-pointer text-neutral-400 hover:text-white focus:outline-none sm:hidden"
             onClick={() => setIsOpen(!isOpen)}
           >
             <Icon

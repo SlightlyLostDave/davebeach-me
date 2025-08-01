@@ -1,6 +1,7 @@
 ---
-import Navbar from '@/components/Navbar.jsx';
 import Layout from '@/layouts/Layout.astro';
+import Navbar from '@/components/Navbar.jsx';
+import Hero from '@/components/home/hero/Hero.astro';
 
 import { basics } from '@cv';
 
@@ -10,7 +11,7 @@ const { name } = basics;
 <Layout title={`${name} - Portfolio`}>
   <div class="container mx-auto max-w-7xl">
     <Navbar client:load />
-    {/* hero */}
+    <Hero />
     {/* about */}
     {/* projects */}
     {/* experience */}
