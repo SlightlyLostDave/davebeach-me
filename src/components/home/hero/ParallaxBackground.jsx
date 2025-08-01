@@ -9,47 +9,47 @@ const ParallaxBackground = () => {
   const mtn1Y = useTransform(x, [0, 0.5], ['0%', '0%']);
 
   return (
-    <section class="absolute inset-0 bg-black/40">
-      <div class="relative h-screen overflow-y-hidden">
+    <section className="absolute inset-0 bg-black/40">
+      <div className="relative h-screen overflow-y-hidden">
         <div
-          class="absolute inset-0 w-full h-screen -z-50"
+          className="absolute inset-0 w-full h-screen -z-50"
           style={{
-            backgroundImage: 'url(/public/home/hero/sky.jpg)',
+            backgroundImage: 'url(/home/hero/sky.jpg)',
             backgroundPosition: 'bottom',
             backgroundSize: 'cover',
           }}
         ></div>
         <motion.div
-          class="absolute inset-0 w-full h-screen -z-40"
+          className="absolute inset-0 w-full h-screen -z-40"
           style={{
-            backgroundImage: 'url(/public/home/hero/mountain-3.png)',
+            backgroundImage: 'url(/home/hero/mountain-3.png)',
             backgroundPosition: 'bottom',
             backgroundSize: 'cover',
             y: mtn3Y,
           }}
         ></motion.div>
         <motion.div
-          class="absolute inset-0 w-full h-screen -z-30"
+          className="absolute inset-0 w-full h-screen -z-30"
           style={{
-            backgroundImage: 'url(/public/home/hero/planets.png)',
+            backgroundImage: 'url(/home/hero/planets.png)',
             backgroundPosition: 'bottom',
             backgroundSize: 'cover',
             x: planetsX,
           }}
         ></motion.div>
         <motion.div
-          class="absolute inset-0 w-full h-screen -z-20"
+          className="absolute inset-0 w-full h-screen -z-20"
           style={{
-            backgroundImage: 'url(/public/home/hero/mountain-2.png)',
+            backgroundImage: 'url(/home/hero/mountain-2.png)',
             backgroundPosition: 'bottom',
             backgroundSize: 'cover',
             y: mtn2Y,
           }}
         ></motion.div>
         <motion.div
-          class="absolute inset-0 w-full h-screen -z-10"
+          className="absolute inset-0 w-full h-screen -z-10"
           style={{
-            backgroundImage: 'url(/public/home/hero/mountain-1.png)',
+            backgroundImage: 'url(/home/hero/mountain-1.png)',
             backgroundPosition: 'bottom',
             backgroundSize: 'cover',
             y: mtn1Y,
