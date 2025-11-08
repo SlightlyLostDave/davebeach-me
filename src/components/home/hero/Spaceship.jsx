@@ -18,7 +18,6 @@ export function Spaceship(props) {
     ySpring.set(-1);
   }, [ySpring]);
   useFrame(() => {
-    console.log(group);
     group.current.position.y = ySpring.get();
   });
 

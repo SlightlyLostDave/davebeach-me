@@ -1,8 +1,9 @@
 ---
 import Layout from '@/layouts/Layout.astro';
-import Navbar from '@/components/Navbar.jsx';
-import Hero from '@/components/home/hero/Hero.jsx';
+import Navbar from '@/components/Navbar';
+import Hero from '@/components/home/hero/Hero';
 import About from '@/components/home/about/About.astro';
+import Projects from '@/components/home/projects/Projects';
 import Experience from '@/components/home/experience/Experience.astro';
 import Contact from '@/components/home/contact/Contact';
 import Footer from '@/components/home/Footer.astro';
@@ -17,7 +18,7 @@ const { name } = basics;
     <Navbar client:load />
     <Hero client:load />
     <About />
-    {/* projects */}
+    <Projects client:load />
     <Experience />
     {/* testimonials */}
     <Contact client:load />
