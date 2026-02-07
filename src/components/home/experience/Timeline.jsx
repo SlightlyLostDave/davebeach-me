@@ -52,7 +52,7 @@ export const Timeline = ({ data }) => {
                   {item.summary}
                 </p>
               )}
-              <ul class="list-disc">
+              <ul className="list-disc">
                 {item.responsibilities.map((responsibility, index) => (
                   <li className="mb-3 font-normal text-neutral-400" key={index}>
                     {responsibility}
