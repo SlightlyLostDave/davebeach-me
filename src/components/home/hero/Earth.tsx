@@ -11,9 +11,19 @@ import day from 'src/assets/hero/day.jpg';
 import night from 'src/assets/hero/night.jpg';
 import clouds from 'src/assets/hero/specular-clouds.jpg';
 
-const initEarth = (): { scene: THREE.Scene } => {
+const initEarth = (onLoadComplete?: () => void): { scene: THREE.Scene } => {
   const canvas = document.querySelector('.earth-3d') as HTMLCanvasElement;
   const scene = new THREE.Scene();
+  let texturesLoaded = 0;
+  const totalTextures = 3;
+
+  const onTextureLoad = () => {
+    texturesLoaded++;
+    if (texturesLoaded === totalTextures && onLoadComplete) {
+      onLoadComplete();
+    }
+  };
+
   const size = {
     width: window.innerWidth,
     height: window.innerHeight,
@@ -42,9 +52,9 @@ const initEarth = (): { scene: THREE.Scene } => {
 
   // texture
   const TL = new THREE.TextureLoader();
-  const dayTexture = TL.load(day.src);
-  const nightTexture = TL.load(night.src);
-  const specularCloudsTexture = TL.load(clouds.src);
+  const dayTexture = TL.load(day.src, onTextureLoad);
+  const nightTexture = TL.load(night.src, onTextureLoad);
+  const specularCloudsTexture = TL.load(clouds.src, onTextureLoad);
 
   dayTexture.colorSpace = THREE.SRGBColorSpace;
   nightTexture.colorSpace = THREE.SRGBColorSpace;
