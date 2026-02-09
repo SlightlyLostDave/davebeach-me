@@ -25,7 +25,11 @@
 @theme {
   /* Colours */
   --color-primary: #b8cbb8;
+  --color-secondary: #c9a16a;
+  --color-accent: #ffd166;
   --color-base-100: #1b1b1b;
+  --color-text-primary: #eaeaea;
+  --color-text-secondary: #aaa;
 
   /* Fonts */
   --font-display: 'Cabin Variable', sans-serif;
@@ -69,7 +73,7 @@
 
 @layer base {
   body {
-    @apply scroll-smooth overflow-x-hidden font-paragraph bg-base-100 text-white;
+    @apply scroll-smooth overflow-x-hidden font-paragraph bg-base-100 text-text-primary;
   }
 
   .c-space {
@@ -94,7 +98,12 @@
 
   /* Button Components */
   .btn {
-    @apply relative px-1 py-4 text-sm text-center rounded-full font-extralight bg-primary w-[12rem] cursor-pointer overflow-hidden;
+    @apply relative px-1 py-4 text-sm text-center text-base-200 rounded-full font-extralight bg-primary w-[12rem] cursor-pointer overflow-hidden;
+  }
+
+  /* Hero */
+  .hero-content h1 {
+    font-size: clamp(4.5rem, -0.875rem + 8.333vw, 6.5rem);
   }
 
   /* Navigation */

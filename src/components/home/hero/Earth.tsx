@@ -1,4 +1,5 @@
 import gsap from 'gsap';
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 import * as THREE from 'three';
 
 import earthVertex from './shaders/earth/vertex.glsl';
@@ -26,7 +27,7 @@ const initEarth = (): { scene: THREE.Scene } => {
     0.1,
     10000,
   );
-  camera.position.set(0, 0.1, 19);
+  camera.position.set(0, 2.15, 4.5);
   scene.add(camera);
 
   // Renderer
@@ -112,9 +113,40 @@ const initEarth = (): { scene: THREE.Scene } => {
 
   scene.add(earthGroup);
 
+  // Scroll animations
+  gsap.registerPlugin(ScrollTrigger);
+  gsap
+    .timeline({
+      scrollTrigger: {
+        trigger: '.hero-main',
+        start: 'top top',
+        scrub: 3,
+        anticipatePin: 1,
+        pin: true,
+      },
+    })
+    .to('.hero-main .hero-content', {
+      filter: 'blur(40px)',
+      autoAlpha: 0,
+      scale: 0.5,
+      duration: 2,
+      ease: 'power1.inOut',
+    })
+    .to(
+      camera.position,
+      {
+        y: 0.1,
+        z: window.innerWidth > 768 ? 19 : 30,
+        x: window.innerWidth > 768 ? 0 : 0.1,
+        duration: 2,
+        ease: 'power1.inOut',
+      },
+      'setting',
+    );
+
   // Animation loop
   gsap.ticker.add((time) => {
-    earth.rotation.y = time * 0.15;
+    earth.rotation.y = time * 0.1;
 
     renderer.render(scene, camera);
   });

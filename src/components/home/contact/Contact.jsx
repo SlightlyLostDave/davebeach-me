@@ -41,7 +41,7 @@ const Contact = () => {
           to_email: 'AliSanatiDev@gmail.com',
           message: formData.message,
         },
-        'pn-Bw_mS1_QQdofuV'
+        'pn-Bw_mS1_QQdofuV',
       );
       setIsLoading(false);
       setFormData({ name: '', email: '', message: '' });
@@ -54,7 +54,10 @@ const Contact = () => {
   };
 
   return (
-    <section className="relative flex items-center c-space section-spacing">
+    <section
+      id="contact"
+      className="relative flex items-center c-space section-spacing"
+    >
       <Particles
         className="absolute inset-0 -z-50"
         quantity={100}
