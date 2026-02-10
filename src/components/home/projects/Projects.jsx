@@ -19,7 +19,7 @@ const Projects = () => {
 
   return (
     <section
-      className="relative c-space section-spacing"
+      className="relative c-space mt-20 md:mt-30"
       onMouseMove={handleMouseMove}
     >
       <h2 className="text-heading">Some Projects</h2>

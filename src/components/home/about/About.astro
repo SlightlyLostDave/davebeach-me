@@ -57,7 +57,7 @@ const { summary } = basics;
     </div>
 
     {/* Grid 5 */}
-    <div class="flex items-end grid-default-color grid-5">
+    <div class="flex items-start grid-default-color grid-5">
       <div class="z-10 w-[50%]">
         <p class="head-text">Tech Stack</p>
         <div class="sub-text text-base-100">
@@ -66,7 +66,11 @@ const { summary } = basics;
           last.
         </div>
       </div>
-      <Frameworks />
+      <div
+        class="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125"
+      >
+        <Frameworks />
+      </div>
     </div>
   </div>
 </section>

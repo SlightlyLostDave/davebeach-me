@@ -4,6 +4,8 @@ import emailjs from '@emailjs/browser';
 import Alert from '../../common/Alert';
 import { Particles } from './Particles';
 
+import { basics } from '@cv';
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -36,9 +38,9 @@ const Contact = () => {
         'template_17us8im',
         {
           from_name: formData.name,
-          to_name: 'Ali',
+          to_name: basics.name,
           from_email: formData.email,
-          to_email: 'AliSanatiDev@gmail.com',
+          to_email: basics.email,
           message: formData.message,
         },
         'pn-Bw_mS1_QQdofuV',
@@ -66,11 +68,11 @@ const Contact = () => {
         refresh
       />
       {showAlert && <Alert type={alertType} text={alertMessage} />}
-      <div className="flex flex-col items-center justify-center max-w-md p-5 mx-auto border border-white/10 rounded-2xl bg-primary">
+      <div className="flex flex-col items-center justify-center max-w-md p-5 mx-auto border border-white/10 rounded-2xl bg-primary text-base-100">
         <div className="flex flex-col items-start w-full gap-5 mb-10">
           <h2 className="text-heading">Let's Talk</h2>
-          <p className="font-normal text-neutral-400">
-            Whether you're loking to build a new website, improve your existing
+          <p className="font-normal">
+            Whether you're looking to build a new website, improve your existing
             platform, or bring a unique project to life, I'm here to help
           </p>
         </div>
@@ -126,7 +128,7 @@ const Contact = () => {
           </div>
           <button
             type="submit"
-            className="w-full px-1 py-3 text-lg text-center rounded-md cursor-pointer bg-radial from-persian-orange to-caramel hover-animation"
+            className="w-full px-1 py-3 text-lg text-center rounded-md cursor-pointer bg-radial from-[#ffe2a0] to-accent hover-animation text-base-100"
           >
             {!isLoading ? 'Send' : 'Sending...'}
           </button>
