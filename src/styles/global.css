@@ -18,13 +18,11 @@
   --color-base-100: #090909;
   --color-base-200: #161616;
   --color-base-300: #242424;
-  --font-display: 'Cabin Variable', sans-serif;
-  --font-paragraph: 'Raleway Variable', sans-serif;
 }
 
 @theme {
   /* Colours */
-  --color-primary: #b8cbb8;
+  --color-primary: #a1c999;
   --color-secondary: #c9a16a;
   --color-accent: #ffd166;
   --color-base-100: #1b1b1b;
@@ -98,7 +96,7 @@
 
   /* Button Components */
   .btn {
-    @apply relative px-1 py-4 text-sm text-center text-base-200 rounded-full font-extralight bg-primary w-[12rem] cursor-pointer overflow-hidden;
+    @apply relative px-1 py-4 text-sm text-center text-base-100 rounded-full font-extralight bg-primary w-[12rem] cursor-pointer overflow-hidden;
   }
 
   /* Hero */
@@ -141,11 +139,11 @@
   }
 
   .grid-default-color {
-    @apply p-6 bg-gradient-to-b from-kobicha to-bistro rounded-2xl;
+    @apply p-6 bg-gradient-to-b from-primary to-[#748c6e] rounded-2xl text-base-100;
   }
 
   .grid-special-color {
-    @apply p-6 bg-gradient-to-b from-caramel to-sand rounded-2xl;
+    @apply p-6 bg-gradient-to-b from-accent to-[#ffe2a0] rounded-2xl text-base-100;
   }
 
   .grid-black-color {
