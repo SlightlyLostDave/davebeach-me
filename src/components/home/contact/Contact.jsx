@@ -6,6 +6,8 @@ import { Particles } from './Particles';
 
 import { basics } from '@cv';
 
+const apiKey = import.meta.env.PUBLIC_EMAILJS_KEY;
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -33,9 +35,10 @@ const Contact = () => {
 
     try {
       console.log('From submitted:', formData);
+      console.log('🚀 ~ handleSubmit ~ apiKey:', apiKey);
       await emailjs.send(
-        'service_79b0nyj',
-        'template_17us8im',
+        'service_kpfv8xb',
+        'template_dgpnxt8',
         {
           from_name: formData.name,
           to_name: basics.name,
@@ -43,7 +46,7 @@ const Contact = () => {
           to_email: basics.email,
           message: formData.message,
         },
-        'pn-Bw_mS1_QQdofuV',
+        apiKey,
       );
       setIsLoading(false);
       setFormData({ name: '', email: '', message: '' });
