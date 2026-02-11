@@ -3,23 +3,15 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@/*": [
-        "src/*"
-      ],
-      "@cv": [
-        "./cv.json"
-      ],
-      "@icons/*": [
-        "src/icons/*"
-      ],
-      "@components/*": [
-        "src/components/*"
-      ],
-      "@layouts/*": [
-        "src/layouts/*"
-      ]
-    }
+      "@/*": ["src/*"],
+      "@cv": ["./cv.json"],
+      "@styles/*": ["src/styles/*"],
+      "@layouts/*": ["src/layouts/*"],
+      "@components/*": ["src/components/*"]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "react"
   },
-  "include": ["global.d.ts", "src", "src/**/*.astro", "src/**/*.ts"],
-  "exclude": ["node_modules", "src/lib"]
+  "include": [".astro/types.d.ts", "**/*"],
+  "exclude": ["dist"]
 }

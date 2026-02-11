@@ -1,30 +1,25 @@
 // @ts-check
-import { defineConfig } from "astro/config";
-import tailwind from "@astrojs/tailwind";
+import { defineConfig } from 'astro/config';
+import glsl from 'vite-plugin-glsl';
+import tailwindcss from '@tailwindcss/vite';
+import react from '@astrojs/react';
 import icon from 'astro-icon';
-import vercel from "@astrojs/vercel/static";
-import playformCompress from "@playform/compress";
+import vercel from '@astrojs/vercel';
 
 // https://astro.build/config
 export default defineConfig({
+  vite: {
+    plugins: [tailwindcss(), glsl()],
+  },
   integrations: [
-    tailwind(),
+    react(),
     icon({
       include: {
-        mdi: ["*"],
-        'ri': ['*'],
-        'simple-icons': ['*'],
-      }
-    }),
-    playformCompress({
-      CSS: false,
-      Image: false,
-      Action: {
-        Passed: async () => true,   // https://github.com/PlayForm/Compress/issues/376
+        mdi: ['*'],
       },
-    })
+    }),
   ],
   outDir: 'dist',
   output: 'static',
-  adapter: vercel()
+  adapter: vercel(),
 });

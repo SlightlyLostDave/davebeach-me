@@ -1,32 +1,25 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
-import astroIcon from 'astro-icon';
-import mdx from '@astrojs/mdx';
-import playformCompress from '@playform/compress';
-import vercel from '@astrojs/vercel/serverless';
+import glsl from 'vite-plugin-glsl';
+import tailwindcss from '@tailwindcss/vite';
+import react from '@astrojs/react';
+import icon from 'astro-icon';
+import vercel from '@astrojs/vercel';
+import partytown from '@astrojs/partytown';
 
 // https://astro.build/config
 export default defineConfig({
+  vite: {
+    plugins: [tailwindcss(), glsl()],
+  },
   integrations: [
-    tailwind(),
-    mdx(),
-    astroIcon({
-      include: {
-        mdi: ['*'],
-        ri: ['*'],
-        'simple-icons': ['*'],
-      },
-    }),
-    playformCompress({
-      CSS: false,
-      Image: false,
-      Action: {
-        Passed: async () => true, // https://github.com/PlayForm/Compress/issues/376
+    react(),
+    icon(),
+    partytown({
+      config: {
+        forward: ['dataLayer.push'],
       },
     }),
   ],
-  // output: "hybrid",
   adapter: vercel(),
-  site: 'https://arielfalcon.me',
 });

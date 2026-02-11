@@ -1,0 +1,81 @@
+---
+import { Image } from 'astro:assets';
+
+import { basics } from '@cv';
+import Globe from './Globe.jsx';
+import CopyEmailButton from './CopyEmailButton.jsx';
+import { Frameworks } from './Frameworks.jsx';
+
+import codingImg from 'src/assets/about/coding.png';
+
+const { summary } = basics;
+---
+
+<section id="about" class="c-space section-spacing">
+  <h2 class="text-heading">About Me</h2>
+  <div class="grid grid-cols-1 gap-4 md:grid-cols-6 md:auto-rows-[18rem] mt-12">
+    {/* Grid 1 */}
+    <div class="flex items-start grid-default-color grid-1">
+      <Image
+        class="absolute scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-20 md:inset-y-30 lg:scale-[1] opacity-20 md:opacity-40 xl:opacity-100"
+        src={codingImg}
+        alt="Coding illustration"
+      />
+      <div class="z-10">
+        <p class="sub-text mb-4 text-base-100">{summary}</p>
+      </div>
+      <div
+        class="absolute inset-x-0 pointer-events-none -bottom-4 h-1/2 sm:h-2/3 bg-gradient-to-t from-[#748c6e]"
+      >
+      </div>
+    </div>
+
+    {/* Grid 2 */}
+    <div class="grid-default-color grid-2">
+      <div class="flex items-center justify-center w-full h-full">
+        <p class="flex items-end text-5xl text-base-100 uppercase text-center">
+          Code. Maps. Discovery.
+        </p>
+      </div>
+    </div>
+
+    {/* Grid 3 */}
+    <div class="grid-black-color grid-3">
+      <div class="z-10 w-[60%]">
+        <p class="head-text">Time Zone</p>
+        <p class="sub-text">
+          Working from Kitchener, Ontario, and open to remote projects
+          worldwide.
+        </p>
+        <figure class="absolute left-[30%] top-[10%]">
+          <Globe client:load />
+        </figure>
+      </div>
+    </div>
+
+    {/* Grid 4 */}
+    <div class="flex items-end grid-special-color grid-4">
+      <div class="flex flex-col items-center justify-center gap-4 size-full">
+        <p class="text-center head-text">Let's build something</p>
+        <CopyEmailButton client:load />
+      </div>
+    </div>
+
+    {/* Grid 5 */}
+    <div class="flex items-start grid-default-color grid-5">
+      <div class="z-10 w-[50%]">
+        <p class="head-text">Tech Stack</p>
+        <div class="sub-text text-base-100">
+          I use the right tools for the job, drawing on years of full-stack
+          experience to build software that’s stable, scalable, and built to
+          last.
+        </div>
+      </div>
+      <div
+        class="absolute inset-y-0 md:inset-y-9 w-full h-full start-[50%] md:scale-125"
+      >
+        <Frameworks />
+      </div>
+    </div>
+  </div>
+</section>

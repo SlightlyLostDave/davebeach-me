@@ -1,74 +1,175 @@
 {
-  "analyticsCode": "",
   "basics": {
     "name": "Dave Beach",
-    "label": "Software Engineer",
-    "animated_main_label": "engineer",
-    "animated_secondary_initial_label": "software",
-    "animated_secondary_final_label": "front_end",
-    "image": "/djb.webp",
     "email": "hello@davebeach.me",
-    "url": "https://www.linkedin.com/in/itsdavebeach/",
-    "summary": "I’m a senior full-stack developer with 17 years of experience building everything from satellite imaging platforms to digital ecosystems for global brands. My strength lies in combining technical precision with big-picture thinking to help mission-driven teams and businesses bring meaningful ideas to life. I believe the best work happens when there’s alignment between values and craft. I’m drawn to projects that make a difference. Whether you need a creative collaborator to help launch a fast, resilient web app, or someone who can lead a dev team through complex challenges with clarity and care, I bring the technical precision of a lead engineer and the mindset of a grounded idealist with a bias for action.",
-    "theme": "orange",
-    "location": {
-      "address": "Kitchener",
-      "city": "Ontario",
-      "countryCode": "CA",
-      "region": "Canada"
-    },
-    "profiles": [
-      {
-        "network": "LinkedIn",
-        "icon": "ri:linkedin-fill",
-        "color": "#0066C2",
-        "username": "Dave Beach",
-        "url": "https://www.linkedin.com/in/itsdavebeach/"
-      },
-      {
-        "network": "GitHub",
-        "icon": "mdi:github",
-        "color": "#929AAB",
-        "username": "SlightlyLostDave",
-        "url": "https://github.com/SlightlyLostDave"
-      },
-      {
-        "network": "Email",
-        "icon": "ri:mail-fill",
-        "color": "#D44638",
-        "username": "Dave Beach",
-        "url": "mailto:hello@davebeach.me"
-      }
-    ]
+    "heroText1": "Hi, I’m Dave",
+    "heroText2": "A freelance developer that gets shit done",
+    "summary": "I’m a software engineer and geospatial practitioner focused on exploration, documentation, and making complex systems understandable. My work sits at the intersection of code, maps, and fieldwork; building tools, visualizations, and datasets that support real-world discovery. Whether I’m developing software, processing geospatial data, or mapping sites deep in the backcountry, my goal is the same: create work that’s technically solid, visually clear, and grounded in purpose."
   },
-  "education": [
+  "social": [
     {
-      "institution": "Rochester Institute of Technology",
-      "url": "https://www.rit.edu/",
-      "area": "Information Technology, Game Development Specialization",
-      "studyType": "Full-time student",
-      "startDate": "2003-09-01",
-      "endDate": "2008-05-01"
+      "network": "LinkedIn",
+      "icon": "mdi:linkedin",
+      "username": "Dave Beach",
+      "url": "https://www.linkedin.com/in/itsdavebeach/"
+    },
+    {
+      "network": "GitHub",
+      "icon": "mdi:github",
+      "username": "SlightlyLostDave",
+      "url": "https://github.com/SlightlyLostDave"
+    },
+    {
+      "network": "Email",
+      "icon": "mdi:email-outline",
+      "username": "Dave Beach",
+      "url": "mailto:hello@davebeach.me"
     }
   ],
-  "certificates": [
+  "projects": [
     {
-      "name": "Leading the Organization",
-      "date": "2021-12-01",
-      "url": "",
-      "issuer": "edX"
+      "id": 1,
+      "title": "Northern Venture Drone Services Website",
+      "description": "A fast, modern, and visually immersive website built to showcase professional drone mapping and aerial services in Ontario. Designed to reflect the spirit of exploration and precision behind the brand, it combines sleek performance with subtle motion and a modern aesthetic.",
+      "subDescription": [
+        "Built with Astro + React: Delivers lightning-fast performance and seamless component-driven design.",
+        "Styled with TailwindCSS: Clean, responsive layout optimized for all screen sizes.",
+        "Enhanced with GSAP Animations: Smooth, natural motion effects that create an engaging, cinematic feel.",
+        "Focused on Clarity and Impact: Bold visuals, concise messaging, and an intuitive structure that communicates professionalism and trust."
+      ],
+      "href": "https://www.northernventure.ca/",
+      "logo": "",
+      "image": "/assets/projects/northern-venture.jpg",
+      "tags": [
+        {
+          "id": 1,
+          "name": "Astro",
+          "path": "/assets/logos/astro.svg"
+        },
+        {
+          "id": 2,
+          "name": "React",
+          "path": "/assets/logos/react.svg"
+        },
+        {
+          "id": 3,
+          "name": "TailwindCSS",
+          "path": "/assets/logos/tailwindcss.svg"
+        },
+        {
+          "id": 4,
+          "name": "GSAP",
+          "path": "/assets/logos/gsap.svg"
+        }
+      ]
     },
     {
-      "name": "Becoming an Effective Leader",
-      "date": "2021-06-01",
-      "url": "",
-      "issuer": "edX"
+      "id": 1,
+      "title": "Northern Venture Drone Services",
+      "description": "A fast, modern, and visually immersive website built to showcase professional drone mapping and aerial services in Ontario. Designed to reflect the spirit of exploration and precision behind the brand, it combines sleek performance with subtle motion and a modern aesthetic.",
+      "subDescription": [
+        "Built with Astro + React: Delivers lightning-fast performance and seamless component-driven design.",
+        "Styled with TailwindCSS: Clean, responsive layout optimized for all screen sizes.",
+        "Enhanced with GSAP Animations: Smooth, natural motion effects that create an engaging, cinematic feel.",
+        "Focused on Clarity and Impact: Bold visuals, concise messaging, and an intuitive structure that communicates professionalism and trust."
+      ],
+      "href": "https://www.northernventure.ca/",
+      "logo": "",
+      "image": "/assets/projects/northern-venture.jpg",
+      "tags": [
+        {
+          "id": 1,
+          "name": "Astro",
+          "path": "/assets/logos/astro.svg"
+        },
+        {
+          "id": 2,
+          "name": "React",
+          "path": "/assets/logos/react.svg"
+        },
+        {
+          "id": 3,
+          "name": "TailwindCSS",
+          "path": "/assets/logos/tailwindcss.svg"
+        },
+        {
+          "id": 4,
+          "name": "GSAP",
+          "path": "/assets/logos/gsap.svg"
+        }
+      ]
     },
     {
-      "name": "Google Analytics Individual Qualification",
-      "date": "2013-06-01",
-      "url": "",
-      "issuer": "Google"
+      "id": 1,
+      "title": "Northern Venture Drone Services",
+      "description": "A fast, modern, and visually immersive website built to showcase professional drone mapping and aerial services in Ontario. Designed to reflect the spirit of exploration and precision behind the brand, it combines sleek performance with subtle motion and a modern aesthetic.",
+      "subDescription": [
+        "Built with Astro + React: Delivers lightning-fast performance and seamless component-driven design.",
+        "Styled with TailwindCSS: Clean, responsive layout optimized for all screen sizes.",
+        "Enhanced with GSAP Animations: Smooth, natural motion effects that create an engaging, cinematic feel.",
+        "Focused on Clarity and Impact: Bold visuals, concise messaging, and an intuitive structure that communicates professionalism and trust."
+      ],
+      "href": "https://www.northernventure.ca/",
+      "logo": "",
+      "image": "/assets/projects/northern-venture.jpg",
+      "tags": [
+        {
+          "id": 1,
+          "name": "Astro",
+          "path": "/assets/logos/astro.svg"
+        },
+        {
+          "id": 2,
+          "name": "React",
+          "path": "/assets/logos/react.svg"
+        },
+        {
+          "id": 3,
+          "name": "TailwindCSS",
+          "path": "/assets/logos/tailwindcss.svg"
+        },
+        {
+          "id": 4,
+          "name": "GSAP",
+          "path": "/assets/logos/gsap.svg"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "title": "Northern Venture Drone Services",
+      "description": "A fast, modern, and visually immersive website built to showcase professional drone mapping and aerial services in Ontario. Designed to reflect the spirit of exploration and precision behind the brand, it combines sleek performance with subtle motion and a modern aesthetic.",
+      "subDescription": [
+        "Built with Astro + React: Delivers lightning-fast performance and seamless component-driven design.",
+        "Styled with TailwindCSS: Clean, responsive layout optimized for all screen sizes.",
+        "Enhanced with GSAP Animations: Smooth, natural motion effects that create an engaging, cinematic feel.",
+        "Focused on Clarity and Impact: Bold visuals, concise messaging, and an intuitive structure that communicates professionalism and trust."
+      ],
+      "href": "https://www.northernventure.ca/",
+      "logo": "",
+      "image": "/assets/projects/northern-venture.jpg",
+      "tags": [
+        {
+          "id": 1,
+          "name": "Astro",
+          "path": "/assets/logos/astro.svg"
+        },
+        {
+          "id": 2,
+          "name": "React",
+          "path": "/assets/logos/react.svg"
+        },
+        {
+          "id": 3,
+          "name": "TailwindCSS",
+          "path": "/assets/logos/tailwindcss.svg"
+        },
+        {
+          "id": 4,
+          "name": "GSAP",
+          "path": "/assets/logos/gsap.svg"
+        }
+      ]
     }
   ],
   "work": [
@@ -78,8 +179,7 @@
       "location_type": "Hybrid",
       "location": "CA",
       "url": null,
-      "startDate": "2024-02-01",
-      "endDate": null,
+      "date": "Mar 2024 - Present",
       "summary": "Founder and lead drone pilot of a specialized aerial services company, delivering innovative solutions across agriculture, mining, construction, utilities, wildlife conservation, historical preservation, and more.",
       "responsibilities": [
         "Lead drone operations for aerial surveys, photogrammetry, 3D mapping, and infrastructure inspections.",
@@ -106,8 +206,7 @@
       "location_type": "Hybrid",
       "location": "CA",
       "url": "https://himandher.ca/",
-      "startDate": "2023-05-01",
-      "endDate": "2024-02-01",
+      "date": "May 2024 - Jan 2024",
       "summary": null,
       "responsibilities": [
         "Led a cross-functional team of developers and contractors, supporting growth through regular one-on-ones",
@@ -134,8 +233,7 @@
       "location_type": "Hybrid",
       "location": "CA",
       "url": "https://skywatch.com/",
-      "startDate": "2020-01-10",
-      "endDate": "2023-02-01",
+      "date": "Jan 2020 - Jan 2023",
       "summary": null,
       "responsibilities": [
         "Architected Angular- and React-based front-end projects for multiple apps, leveraging NgRx and AWS in a monorepo pattern",
@@ -169,8 +267,7 @@
       "location_type": "Hybrid",
       "location": "CA",
       "url": "https://www.saatchi.ca/",
-      "startDate": "2013-11-10",
-      "endDate": "2020-02-10",
+      "date": "Jun 2010 - Jan 2020",
       "summary": null,
       "responsibilities": [
         "Played a key role in redesigns for Toyota and Lexus websites, ranked #1 in JD Power for OEM sites and were Canada's 1st responsive auto sites",
@@ -194,8 +291,7 @@
       "location_type": "Remote",
       "location": "CA",
       "url": "https://www.tunnelbear.com/",
-      "startDate": "2012-09-01",
-      "endDate": "2015-05-01",
+      "date": "Sep 2012 - Mar 2015",
       "summary": null,
       "responsibilities": [
         "Maintained and enhanced the marketing website for an early-stage VPN startup using XHTML, CSS3, and JavaScript",
@@ -213,31 +309,12 @@
       }
     },
     {
-      "name": "TPM Communications",
-      "position": "Senior Developer Contractor",
-      "location_type": "Hybrid",
-      "location": "CA",
-      "url": null,
-      "startDate": "2010-06-01",
-      "endDate": "2013-12-01",
-      "summary": null,
-      "responsibilities": null,
-      "achievements": null,
-      "skills": {
-        "XHTML": "simple-icons:html5",
-        "LESS": "simple-icons:less",
-        "Java": "ri:java-line",
-        "WordPress": "simple-icons:wordpress"
-      }
-    },
-    {
       "name": "Sesame Communications",
       "position": "Freelance Developer",
       "location_type": "Remote",
       "location": "US",
       "url": "https://www.sesamecommunications.com/",
-      "startDate": "2009-09-01",
-      "endDate": "2010-09-10",
+      "date": "Sep 2009 - Aug 2010",
       "summary": null,
       "responsibilities": [
         "Designed and developed standards-compliant websites for clients in the dental and orthodontic industries",
@@ -259,8 +336,7 @@
       "location_type": "Hybrid",
       "location": "CA",
       "url": null,
-      "startDate": "2008-01-10",
-      "endDate": "2010-08-01",
+      "date": "Feb 2008 - Aug 2010",
       "summary": null,
       "responsibilities": [
         "Led a team of interface developers in building a custom CMS for managing Scott’s Miracle-Gro web content",
@@ -282,8 +358,7 @@
       "location_type": "Hybrid",
       "location": "CA",
       "url": null,
-      "startDate": "2008-08-01",
-      "endDate": "2009-01-01",
+      "date": "Sep 2008 - Dec 2008",
       "summary": null,
       "responsibilities": [
         "Developed a custom XHTML, LESS, JavaScript, and PHP-based templating system that increased page production efficiency by 4x",
@@ -305,8 +380,7 @@
       "location_type": "Remote",
       "location": "US",
       "url": "https://esab.com/",
-      "startDate": "2008-03-01",
-      "endDate": "2008-10-01",
+      "date": "Mar 2008 - Sep 2008",
       "summary": null,
       "responsibilities": [
         "Developed websites for multiple ESAB brands including PowerCut and FastTrack",
@@ -326,8 +400,7 @@
       "location_type": "Remote",
       "location": "US",
       "url": null,
-      "startDate": "2006-08-01",
-      "endDate": "2008-09-10",
+      "date": "Aug 2006 - Sep 2008",
       "summary": null,
       "responsibilities": [
         "Designed and developed websites for local businesses and organizations",
@@ -340,324 +413,6 @@
         "JavaScript": "simple-icons:javascript",
         "PHP": "simple-icons:php"
       }
-    }
-  ],
-  "skills": [
-    {
-      "name": "HTML5",
-      "icon": "simple-icons:html5",
-      "level": "Advanced",
-      "keywords": ["Web Development", "Frontend"]
-    },
-    {
-      "name": "CSS3",
-      "icon": "ri:css3-fill",
-      "level": "Advanced",
-      "keywords": ["Web Development", "Frontend", "Responsive Design"]
-    },
-    {
-      "name": "SCSS",
-      "icon": "simple-icons:sass",
-      "level": "Advanced",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "CSS Preprocessor",
-        "Responsive Design"
-      ]
-    },
-    {
-      "name": "Tailwind",
-      "icon": "mdi:tailwind",
-      "level": "Advanced",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "CSS Framework",
-        "Responsive Design"
-      ]
-    },
-    {
-      "name": "JavaScript",
-      "icon": "simple-icons:javascript",
-      "level": "Advanced",
-      "keywords": ["Web Development", "Frontend", "Backend", "Fullstack"]
-    },
-    {
-      "name": "TypeScript",
-      "icon": "simple-icons:typescript",
-      "level": "Advanced",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "Backend",
-        "JavaScript Superset"
-      ]
-    },
-    {
-      "name": "Three.js",
-      "icon": "simple-icons:threedotjs",
-      "level": "Intermediate",
-      "keywords": ["Web Development", "Frontend", "3D", "WebGL"]
-    },
-    {
-      "name": "Angular",
-      "icon": "simple-icons:angular",
-      "level": "Advanced",
-      "keywords": ["Web Development", "Frontend", "JavaScript Framework", "UI"]
-    },
-    {
-      "name": "RxJS",
-      "icon": "simple-icons:reactivex",
-      "level": "Intermediate",
-      "keywords": [
-        "Web Development",
-        "Frontend",
-        "Reactive Programming",
-        "JavaScript"
-      ]
-    },
-    {
-      "name": "React",
-      "icon": "simple-icons:react",
-      "level": "Advanced",
-      "keywords": ["Web Development", "Frontend", "JavaScript Framework", "UI"]
-    },
-    {
-      "name": "Astro",
-      "icon": "simple-icons:astro",
-      "level": "Intermediate",
-      "keywords": ["Web Development", "Frontend", "SSR", "Static Generation"]
-    },
-    {
-      "name": "Node",
-      "icon": "ri:nodejs-line",
-      "level": "Intermediate",
-      "keywords": ["Web Development", "Backend", "JavaScript", "Server"]
-    },
-    {
-      "name": "PHP",
-      "icon": "simple-icons:php",
-      "level": "Advanced",
-      "keywords": ["Web Development", "Backend", "Scripting"]
-    },
-    {
-      "name": "Java",
-      "icon": "ri:java-line",
-      "level": "Beginner",
-      "keywords": ["Web Development", "Backend"]
-    },
-    {
-      "name": "Python",
-      "icon": "simple-icons:python",
-      "level": "Intermediate",
-      "keywords": ["Scripting", "Automation", "Web Development"]
-    },
-    {
-      "name": "MongoDB",
-      "icon": "simple-icons:mongodb",
-      "level": "Beginner",
-      "keywords": ["Databases", "File", "Data Storage", "Backend"]
-    },
-    {
-      "name": "MySQL",
-      "icon": "simple-icons:mysql",
-      "level": "Advanced",
-      "keywords": ["Backend", "Databases", "SQL", "Relational Database"]
-    },
-    {
-      "name": "PostgreSQL",
-      "icon": "simple-icons:postgresql",
-      "level": "Advanced",
-      "keywords": ["Backend", "Databases", "SQL", "Relational Database"]
-    },
-    {
-      "name": "Shopify",
-      "icon": "simple-icons:shopify",
-      "level": "Advanced",
-      "keywords": ["Web Development", "E-commerce", "CMS"]
-    },
-    {
-      "name": "Contentful",
-      "icon": "simple-icons:contentful",
-      "level": "Advanced",
-      "keywords": ["Web Development", "CMS", "Headless CMS"]
-    },
-    {
-      "name": "WordPress",
-      "icon": "simple-icons:wordpress",
-      "level": "Advanced",
-      "keywords": ["Web Development", "CMS", "Blogging"]
-    },
-    {
-      "name": "Git",
-      "icon": "mdi:git",
-      "level": "Advanced",
-      "keywords": ["Version Control", "Collaboration", "Source Code"]
-    },
-    {
-      "name": "GitHub",
-      "icon": "mdi:github",
-      "level": "Advanced",
-      "keywords": ["Version Control", "Collaboration", "Source Code", "Git"]
-    },
-    {
-      "name": "AWS",
-      "icon": "simple-icons:amazonaws",
-      "level": "Intermediate",
-      "keywords": ["Cloud Computing", "Backend", "Infrastructure"]
-    },
-    {
-      "name": "Docker",
-      "icon": "mdi:docker",
-      "level": "Intermediate",
-      "keywords": ["Virtual Environments", "Backend"]
-    },
-    {
-      "name": "Jest",
-      "icon": "simple-icons:jest",
-      "level": "Intermediate",
-      "keywords": ["Testing", "Web Development", "Frontend", "Backend"]
-    },
-    {
-      "name": "Postman",
-      "icon": "simple-icons:postman",
-      "level": "Intermediate",
-      "keywords": ["API", "Testing", "Web Development", "Backend"]
-    },
-    {
-      "name": "Accessibility",
-      "icon": "mdi:accessibility",
-      "level": "Advanced",
-      "keywords": ["Web Development", "Frontend", "A11y", "WCAG"]
-    },
-    {
-      "name": "Unity",
-      "icon": "simple-icons:unity",
-      "level": "Intermediate",
-      "keywords": ["Game Development", "3D", "2D"]
-    },
-    {
-      "name": "Unreal Engine",
-      "icon": "simple-icons:unrealengine",
-      "level": "Intermediate",
-      "keywords": ["Game Development", "3D", "2D"]
-    },
-    {
-      "name": "RealityCapture",
-      "icon": "mdi:rotate-3d",
-      "level": "Intermediate",
-      "keywords": ["3D", "Photogrammetry", "3D Scanning"]
-    },
-    {
-      "name": "Figma",
-      "icon": "simple-icons:figma",
-      "level": "Intermediate",
-      "keywords": ["Prototyping", "Web Development", "Frontend"]
-    }
-  ],
-  "languages": [
-    {
-      "language": "English",
-      "fluency": "Native speaker"
-    }
-  ],
-  "projects": [
-    {
-      "name": "CV Matching System",
-      "isActive": true,
-      "description": "A proprietary code AI-driven CV matching system to connect the offer and the best candidates. Automates the recruitment process.",
-      "highlights": [
-        "🎯 Tailored job opportunities",
-        "✨ AI-driven complex workflows ",
-        "🚀 80% increase in productivity"
-      ],
-      "stack": {
-        "Python": "simple-icons:python",
-        "Redis": "simple-icons:redis",
-        "Firebase": "simple-icons:firebase",
-        "Google Cloud": "simple-icons:googlecloud",
-        "Claude": "ri:claude-fill",
-        "Groq": "ri:robot-2-fill"
-      },
-      "url": "https://www.gringojobs.com"
-    },
-    {
-      "name": "TODO List",
-      "isActive": false,
-      "description": "A simple app to showcase my skills in Angular. It's a TODO list with a beautiful and smooth UI, good user experience and best practices. Not finished yet.",
-      "highlights": [
-        "📝 In progress",
-        "😮‍ Made-from-scratch complex components",
-        "😊 Beautiful and smooth UI, good user experience",
-        "\uD83E\uDD16 Server Side Rendering"
-      ],
-      "github": "https://github.com/ArielFalcon/TODO-list",
-      "stack": {
-        "Angular": "simple-icons:angular",
-        "RxJS": "simple-icons:reactivex",
-        "TypeScript": "simple-icons:typescript",
-        "SCSS": "simple-icons:sass",
-        "NodeJS": "ri:nodejs-line",
-        "Firebase": "simple-icons:firebase"
-      }
-    },
-    {
-      "name": "Portfolio",
-      "isActive": true,
-      "description": "This website! My personal portfolio, made with Astro. Integrates many themes and key shortcut actions.",
-      "highlights": [
-        "🚀 Fast, modern and SEO-friendly",
-        "🎨 Printable CV generation",
-        "〔N〕Crazy NeoVim mode, try it!"
-      ],
-      "github": "https://github.com/ArielFalcon/portfolio",
-      "stack": {
-        "Astro": "simple-icons:astro",
-        "TypeScript": "simple-icons:typescript",
-        "Tailwind": "mdi:tailwind",
-        "NodeJS": "ri:nodejs-line",
-        "PNPM": "simple-icons:pnpm",
-        "Vercel": "simple-icons:vercel"
-      },
-      "url": "https://www.arielfalcon.me"
-    },
-    {
-      "name": "AI Web Scraper",
-      "isActive": false,
-      "description": "A web scraper that uses AI to extract data from websites. It's a tool to automate the data extraction process, using machine learning to identify and extract data from websites.",
-      "highlights": [
-        "🤖 Simple script",
-        "🔍 Data Extraction",
-        "🌐 Web scraping"
-      ],
-      "stack": {
-        "Javascript": "simple-icons:javascript",
-        "Selenium": "simple-icons:selenium",
-        "ChromeDriver": "ri:chrome-fill",
-        "Groq": "ri:robot-2-fill"
-      },
-      "github": "https://github.com/ArielFalcon/ai_web_scrapper"
-    },
-    {
-      "name": "SpaceX Invaders",
-      "isActive": true,
-      "description": "A Space Invaders game with a retro look, made with Vue3 and TypeScript. It's a fun project to showcase my skills in Vue3 and TypeScript.",
-      "highlights": [
-        "🚀 Space Invaders game",
-        "🛸 Retro fun",
-        "🎮 Vue3 + TypeScript"
-      ],
-      "stack": {
-        "Vue3": "ri:vuejs-line",
-        "TypeScript": "simple-icons:typescript",
-        "CSS": "simple-icons:css",
-        "Vite": "simple-icons:vite",
-        "PNPM": "simple-icons:pnpm",
-        "Netlify": "simple-icons:netlify"
-      },
-      "github": "https://github.com/ArielFalcon/spacex-invaders",
-      "url": "https://spacex-invaders.netlify.app/"
     }
   ]
 }
