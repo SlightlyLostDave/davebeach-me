@@ -18,7 +18,7 @@ const Hero = () => {
     <>
       <LoadingScreen isVisible={isLoading} />
       <section className="hero-main relative">
-        <div className="hero-content absolute top-[50%] md:top-[40%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center max-w-[1000px] flex flex-col items-center gap-[1.4rem] w-dvw z-2">
+        <div className="hero-content absolute top-[40%] left-[50%] translate-x-[-50%] translate-y-[-50%] text-center max-w-[1000px] flex flex-col items-center gap-[1.4rem] w-dvw z-2">
           <h1 className="font-display font-medium text-balance leading-[115%] text-primary">
             Crafting Code, Mapping Data, Telling Stories
           </h1>
