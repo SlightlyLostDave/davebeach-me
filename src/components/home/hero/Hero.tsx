@@ -26,7 +26,7 @@ const Hero = () => {
             Combining software engineering and geospatial expertise with
             hands-on exploration to document and analyze the world around us.
           </p>
-          <button className="btn">Get in touch.</button>
+          <button className="btn">Let's build something.</button>
         </div>
         <canvas className="earth-3d relative pointer-events-none user-select-none z-1"></canvas>
       </section>
