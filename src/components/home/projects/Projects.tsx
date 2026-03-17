@@ -19,6 +19,7 @@ const Projects = () => {
 
   return (
     <section
+      id="projects"
       className="relative c-space mt-20 md:mt-30"
       onMouseMove={handleMouseMove}
     >
