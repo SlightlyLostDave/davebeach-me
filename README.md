@@ -19,14 +19,14 @@ I'm a software engineer and geospatial practitioner focused on exploration, docu
 
 ## Tech stack
 
-| Layer | Tools |
-| --- | --- |
-| Framework | [Astro](https://astro.build) 6, [React](https://react.dev) 19 |
+| Layer         | Tools                                                                                                                                                                                      |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Framework     | [Astro](https://astro.build) 6, [React](https://react.dev) 19                                                                                                                              |
 | 3D / Graphics | [Three.js](https://threejs.org), [React Three Fiber](https://docs.pmnd.rs/react-three-fiber), [drei](https://github.com/pmndrs/drei), custom GLSL shaders, [cobe](https://cobe.vercel.app) |
-| Styling | [Tailwind CSS](https://tailwindcss.com) 4 |
-| Animation | [GSAP](https://gsap.com), [Motion](https://motion.dev) |
-| Contact form | [EmailJS](https://www.emailjs.com) |
-| Hosting | [Vercel](https://vercel.com) |
+| Styling       | [Tailwind CSS](https://tailwindcss.com) 4                                                                                                                                                  |
+| Animation     | [GSAP](https://gsap.com), [Motion](https://motion.dev)                                                                                                                                     |
+| Contact form  | [EmailJS](https://www.emailjs.com)                                                                                                                                                         |
+| Hosting       | [Vercel](https://vercel.com)                                                                                                                                                               |
 
 ## Project structure
 
@@ -58,13 +58,13 @@ npm run dev
 
 The site runs at `localhost:4321`.
 
-| Command | Action |
-| --- | --- |
-| `npm install` | Install dependencies |
-| `npm run dev` | Start the local dev server |
-| `npm run build` | Build the production site to `./dist/` |
-| `npm run preview` | Preview the production build locally |
-| `npm run commit` | Commit via Commitizen (conventional commits) |
+| Command           | Action                                       |
+| ----------------- | -------------------------------------------- |
+| `npm install`     | Install dependencies                         |
+| `npm run dev`     | Start the local dev server                   |
+| `npm run build`   | Build the production site to `./dist/`       |
+| `npm run preview` | Preview the production build locally         |
+| `npm run commit`  | Commit via Commitizen (conventional commits) |
 
 ## Content
 
