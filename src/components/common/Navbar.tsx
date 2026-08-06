@@ -5,7 +5,7 @@ import { motion } from 'motion/react';
 import { basics } from '@cv';
 
 const { name } = basics;
-const navItems = ['Home', 'About', 'Experience', 'Contact'];
+const navItems = ['Home', 'About', 'Projects', 'Experience', 'Contact'];
 
 function Navigation() {
   return (

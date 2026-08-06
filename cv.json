@@ -28,146 +28,170 @@
   ],
   "projects": [
     {
-      "id": 1,
-      "title": "Northern Venture Drone Services Website",
-      "description": "A fast, modern, and visually immersive website built to showcase professional drone mapping and aerial services in Ontario. Designed to reflect the spirit of exploration and precision behind the brand, it combines sleek performance with subtle motion and a modern aesthetic.",
+      "title": "Indie Books Atlas",
+      "description": "A live map of Canada's independently owned bookstores. 791 mapped, and counting.",
       "subDescription": [
-        "Built with Astro + React: Delivers lightning-fast performance and seamless component-driven design.",
-        "Styled with TailwindCSS: Clean, responsive layout optimized for all screen sizes.",
-        "Enhanced with GSAP Animations: Smooth, natural motion effects that create an engaging, cinematic feel.",
-        "Focused on Clarity and Impact: Bold visuals, concise messaging, and an intuitive structure that communicates professionalism and trust."
+        "Canada's independent bookstores are not listed anywhere useful. They open, move, and close without anyone updating a record, and the directories that exist are stale, padded with chains, or both. Indie Books Atlas is the attempt at a better answer. Independents only, no chains and no campus shops, 791 mapped so far and nowhere near done. Tap a pin and you get hours, what the shop actually specializes in, and whether it is worth the detour.",
+        "Keeping that current is the real problem, so the map is only half the project. A Python pipeline pulls candidate stores from OpenStreetMap, diffs them against what is already stored, enriches the records from store websites, and writes to Postgres with PostGIS behind it. Every record carries a completeness score, so the atlas knows where its own gaps are instead of pretending it is finished.",
+        "The front end queries the database live rather than shipping a static extract, which means the map is never further out of date than the last pipeline run. It is a directory that happens to be a working demonstration of the stack underneath it."
       ],
-      "href": "https://www.northernventure.ca/",
+      "links": [
+        {
+          "label": "View Project",
+          "url": "https://indie-books-atlas.vercel.app/"
+        },
+        {
+          "label": "View Code",
+          "url": "https://github.com/SlightlyLostDave/indie-books-atlas-pipeline"
+        }
+      ],
       "logo": "",
-      "image": "/assets/projects/northern-venture.jpg",
+      "image": "/projects/indie-books-atlas.webp",
       "tags": [
         {
-          "id": 1,
-          "name": "Astro",
-          "path": "/assets/logos/astro.svg"
+          "name": "Next.js",
+          "icon": "logos:nextjs-icon"
         },
         {
-          "id": 2,
           "name": "React",
-          "path": "/assets/logos/react.svg"
+          "icon": "logos:react"
         },
         {
-          "id": 3,
-          "name": "TailwindCSS",
-          "path": "/assets/logos/tailwindcss.svg"
+          "name": "Mapbox GL",
+          "icon": "logos:mapbox-icon"
         },
         {
-          "id": 4,
-          "name": "GSAP",
-          "path": "/assets/logos/gsap.svg"
+          "name": "Supabase",
+          "icon": "logos:supabase-icon"
+        },
+        {
+          "name": "PostgreSQL",
+          "icon": "logos:postgresql"
+        },
+        {
+          "name": "PostGIS",
+          "icon": "oui:app-gis"
+        },
+        {
+          "name": "Python",
+          "icon": "logos:python"
+        },
+        {
+          "name": "Vercel",
+          "icon": "ri:vercel-fill"
         }
       ]
     },
     {
-      "id": 1,
       "title": "Northern Venture Drone Services",
-      "description": "A fast, modern, and visually immersive website built to showcase professional drone mapping and aerial services in Ontario. Designed to reflect the spirit of exploration and precision behind the brand, it combines sleek performance with subtle motion and a modern aesthetic.",
+      "description": "Drone and geomatics services out of Kitchener. Video-led, hand-built, no page builder.",
       "subDescription": [
-        "Built with Astro + React: Delivers lightning-fast performance and seamless component-driven design.",
-        "Styled with TailwindCSS: Clean, responsive layout optimized for all screen sizes.",
-        "Enhanced with GSAP Animations: Smooth, natural motion effects that create an engaging, cinematic feel.",
-        "Focused on Clarity and Impact: Bold visuals, concise messaging, and an intuitive structure that communicates professionalism and trust."
+        "Northern Venture is my commercial drone and geomatics practice, running out of Kitchener, Ontario. Aerial mapping, inspection, and 3D capture for construction, mining, agriculture, and heritage preservation.",
+        "The build is a static Astro site. Components compile to plain HTML at build time, so the shipped page carries no framework runtime and next to no JavaScript, and the whole thing deploys as a flat file tree with no server to keep alive between enquiries.",
+        "That headroom exists for a reason. The argument this site makes is visual, so the bandwidth goes to real flight footage in the hero and behind every service card, with stills served as webp. Clips are muted, inline, and lazily loaded, with poster frames holding the layout until playback starts, so first paint never waits on video. GSAP is the one deliberate exception to the no-JavaScript posture, driving the scroll-triggered reveals that walk a visitor through the services in order."
       ],
-      "href": "https://www.northernventure.ca/",
+      "links": [
+        {
+          "label": "View Project",
+          "url": "https://www.northernventure.ca/"
+        },
+        {
+          "label": "View Code",
+          "url": "https://github.com/SlightlyLostDave/northern-venture"
+        }
+      ],
       "logo": "",
-      "image": "/assets/projects/northern-venture.jpg",
+      "image": "/projects/northern-venture.webp",
       "tags": [
         {
-          "id": 1,
           "name": "Astro",
-          "path": "/assets/logos/astro.svg"
+          "icon": "vscode-icons:file-type-astro"
         },
         {
-          "id": 2,
-          "name": "React",
-          "path": "/assets/logos/react.svg"
-        },
-        {
-          "id": 3,
-          "name": "TailwindCSS",
-          "path": "/assets/logos/tailwindcss.svg"
-        },
-        {
-          "id": 4,
           "name": "GSAP",
-          "path": "/assets/logos/gsap.svg"
+          "icon": "logos:greensock-icon"
+        },
+        {
+          "name": "TailwindCSS",
+          "icon": "logos:tailwindcss-icon"
+        },
+        {
+          "name": "React",
+          "icon": "logos:react"
+        },
+        {
+          "name": "Vercel",
+          "icon": "ri:vercel-fill"
         }
       ]
     },
     {
-      "id": 1,
-      "title": "Northern Venture Drone Services",
-      "description": "A fast, modern, and visually immersive website built to showcase professional drone mapping and aerial services in Ontario. Designed to reflect the spirit of exploration and precision behind the brand, it combines sleek performance with subtle motion and a modern aesthetic.",
+      "title": "Centre Hill Headframe",
+      "description": "A headframe that no longer stands, rebuilt in 3D from drone video.",
       "subDescription": [
-        "Built with Astro + React: Delivers lightning-fast performance and seamless component-driven design.",
-        "Styled with TailwindCSS: Clean, responsive layout optimized for all screen sizes.",
-        "Enhanced with GSAP Animations: Smooth, natural motion effects that create an engaging, cinematic feel.",
-        "Focused on Clarity and Impact: Bold visuals, concise messaging, and an intuitive structure that communicates professionalism and trust."
+        "The Centre Hill Gold Mine headframe was captured from a drone on an overcast day, flown manually, video only rather than stills. It has since collapsed, so that footage is the only record that will ever exist of it upright.",
+        "Stills pulled from the video went into RealityScan for reconstruction, and the first pass came out lumpy across the sheet metal sides, a dense-reconstruction artifact rather than a coverage problem. Tighter reconstruction settings alone did not fix it, so the fix was to go back further, rebuilding the source frames directly from the original video rather than trusting the first extraction. The current model on Sketchfab is the result: a clean pass, in place of the earlier rough one.",
+        "None of this was ever aimed at survey accuracy. The goal was a model people can rotate and actually look at, and video-sourced photogrammetry gets you there, even for a structure you will never be able to point a camera at again."
       ],
-      "href": "https://www.northernventure.ca/",
+      "links": [
+        {
+          "label": "View 3D Model",
+          "url": "https://sketchfab.com/3d-models/centre-hill-gold-mine-headframe-northern-on-882b972e750a47eda7b57b2fa30221a4"
+        }
+      ],
       "logo": "",
-      "image": "/assets/projects/northern-venture.jpg",
+      "image": "/projects/centre-hill.webp",
       "tags": [
         {
-          "id": 1,
-          "name": "Astro",
-          "path": "/assets/logos/astro.svg"
+          "name": "Python",
+          "icon": "logos:python"
         },
         {
-          "id": 2,
-          "name": "React",
-          "path": "/assets/logos/react.svg"
+          "name": "FFmpeg",
+          "icon": "logos:ffmpeg-icon"
         },
         {
-          "id": 3,
-          "name": "TailwindCSS",
-          "path": "/assets/logos/tailwindcss.svg"
-        },
-        {
-          "id": 4,
-          "name": "GSAP",
-          "path": "/assets/logos/gsap.svg"
+          "name": "RealityScan",
+          "icon": "arcticons:realityscan"
         }
       ]
     },
     {
-      "id": 1,
-      "title": "Northern Venture Drone Services",
-      "description": "A fast, modern, and visually immersive website built to showcase professional drone mapping and aerial services in Ontario. Designed to reflect the spirit of exploration and precision behind the brand, it combines sleek performance with subtle motion and a modern aesthetic.",
+      "title": "SL Maps Ingestion Pipeline",
+      "description": "A pipeline that turns messy QGIS layers into clean geospatial data, one field trip at a time.",
       "subDescription": [
-        "Built with Astro + React: Delivers lightning-fast performance and seamless component-driven design.",
-        "Styled with TailwindCSS: Clean, responsive layout optimized for all screen sizes.",
-        "Enhanced with GSAP Animations: Smooth, natural motion effects that create an engaging, cinematic feel.",
-        "Focused on Clarity and Impact: Bold visuals, concise messaging, and an intuitive structure that communicates professionalism and trust."
+        "SL Maps started as a question about my own field data: years of QGIS placemarks and routes, sorted in some layers and not at all in others, with no consistent path from \"point I dropped in the field\" to something that I can use in a web map. The pipeline is that path. It reads QGIS layers, applies a YAML field mapping so inconsistent source data lands in a consistent schema, and stages everything before it ever touches the database.",
+        "GeoPandas does the staging work, which keeps the messy part of the process, cleaning, reprojecting, and validating geometry, separate from the part that writes to PostGIS. That separation matters more than it sounds: a staging-first pipeline means a bad import never corrupts the live dataset, since nothing is committed until the staged version checks out. The whole thing runs from VS Code and Jupyter, so each migration is inspectable rather than a black box.",
+        "This is a working tool rather than a finished product, and it is still absorbing years of inconsistent field data one layer group at a time. The entry will keep changing as more of that backlog gets migrated and the web-facing placemark app takes shape on top of it."
       ],
-      "href": "https://www.northernventure.ca/",
+      "links": [
+        {
+          "label": "View Code",
+          "url": "https://github.com/SlightlyLostDave/sl-maps-ingest"
+        }
+      ],
       "logo": "",
-      "image": "/assets/projects/northern-venture.jpg",
+      "image": "/projects/sl-maps.webp",
       "tags": [
         {
-          "id": 1,
-          "name": "Astro",
-          "path": "/assets/logos/astro.svg"
+          "name": "QGIS",
+          "icon": "simple-icons:qgis"
         },
         {
-          "id": 2,
-          "name": "React",
-          "path": "/assets/logos/react.svg"
+          "name": "Python",
+          "icon": "logos:python"
         },
         {
-          "id": 3,
-          "name": "TailwindCSS",
-          "path": "/assets/logos/tailwindcss.svg"
+          "name": "PostgreSQL",
+          "icon": "logos:postgresql"
         },
         {
-          "id": 4,
-          "name": "GSAP",
-          "path": "/assets/logos/gsap.svg"
+          "name": "PostGIS",
+          "icon": "oui:app-gis"
+        },
+        {
+          "name": "GeoPandas",
+          "icon": "simple-icons:geopandas"
         }
       ]
     }
