@@ -54,7 +54,7 @@ const ProjectDetails = ({
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1 font-medium cursor-pointer hover-animation"
                 >
-                  {link.label} <img src="assets/arrow-up.svg" className="size-4" />
+                  {link.label}
                 </a>
               ))}
             </div>
