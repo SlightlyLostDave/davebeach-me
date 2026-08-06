@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Icon, loadIcons } from '@iconify/react';
 
 import ProjectDetails from './ProjectDetails.jsx';
 
@@ -6,12 +7,15 @@ const Project = ({
   title,
   description,
   subDescription,
-  href,
+  links,
   image,
   tags,
   setPreview,
 }) => {
   const [isHidden, setIsHidden] = useState(false);
+
+  loadIcons(['mdi:arrow-right-thick']);
+
   return (
     <>
       <div
@@ -32,7 +36,7 @@ const Project = ({
           className="flex items-center gap-1 cursor-pointer hover-animation"
         >
           Read More
-          <img src="assets/arrow-right.svg" className="w-5" />
+          <Icon icon="mdi:arrow-right-thick" width="1.25rem" />
         </button>
       </div>
       <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full" />
@@ -43,7 +47,7 @@ const Project = ({
           subDescription={subDescription}
           image={image}
           tags={tags}
-          href={href}
+          links={links}
           closeModal={() => setIsHidden(false)}
         />
       )}

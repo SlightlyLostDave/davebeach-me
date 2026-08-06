@@ -23,7 +23,7 @@ const Projects = () => {
       className="relative c-space mt-20 md:mt-30"
       onMouseMove={handleMouseMove}
     >
-      <h2 className="text-heading">Some Projects</h2>
+      <h2 className="text-heading">Projects</h2>
       <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-12 h-[1px] w-full" />
 
       {projects.map((project) => (
