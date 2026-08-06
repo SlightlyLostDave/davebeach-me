@@ -13,9 +13,9 @@ const ProjectDetails = ({
   loadIcons(['mdi:close', ...tags.map((tag) => tag.icon)]);
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center w-full h-full overflow-hidden backdrop-blur-sm">
+    <div className="fixed inset-0 z-50 flex items-center justify-center w-full h-full p-4 overflow-y-auto backdrop-blur-sm">
       <motion.div
-        className="relative max-w-2xl border shadow-sm rounded-2xl bg-gradient-to-l from-base-200 to-base-100 border-white/10"
+        className="relative w-full max-w-2xl my-auto border shadow-sm rounded-2xl bg-gradient-to-l from-base-200 to-base-100 border-white/10"
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
       >
@@ -32,8 +32,8 @@ const ProjectDetails = ({
           {subDescription.map((subDesc, index) => (
             <p className="mb-3 font-normal text-neutral-400">{subDesc}</p>
           ))}
-          <div className="flex items-center justify-between mt-4">
-            <div className="flex gap-3">
+          <div className="flex flex-col items-start justify-between gap-4 mt-4 sm:flex-row sm:items-center">
+            <div className="flex flex-wrap gap-3">
               {tags.map((tag) => (
                 <Icon
                   key={tag.name}
@@ -45,7 +45,7 @@ const ProjectDetails = ({
                 />
               ))}
             </div>
-            <div className="flex flex-col items-end gap-1">
+            <div className="flex flex-col items-start gap-1 sm:items-end">
               {links.map((link) => (
                 <a
                   key={link.label}
