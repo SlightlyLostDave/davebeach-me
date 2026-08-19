@@ -25,7 +25,7 @@ This is an Astro 6 + React 19 single-page portfolio site (davebeach.me).
   - `common/` — Navbar, alerts, loading screen (shared chrome)
   - `home/hero/` — custom hand-written GLSL shader Earth (day/night textures, specular clouds, atmosphere) rendered via Three.js/React Three Fiber
   - `home/about/` — bio, frameworks, orbiting circles, and an interactive `cobe` globe
-  - `home/projects/` — project cards (`Project.jsx`) and detail views (`ProjectDetails.jsx`), sourced from `cv.json`'s `projects` array
+  - `home/projects/` — project cards (`Project.jsx`), sourced from `cv.json`'s `projects` array; each links to a full detail page at `src/pages/projects/[slug].astro`, with shared detail-page pieces in `src/components/projects/`
   - `home/experience/` — animated timeline (GSAP)
   - `home/contact/` — contact form (EmailJS) with a particles background
 - **Styling**: Tailwind CSS 4 via `@tailwindcss/vite` (no separate Tailwind config file — configured through the Vite plugin in `astro.config.mjs`).

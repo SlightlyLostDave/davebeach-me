@@ -1,19 +1,6 @@
-import { useState } from 'react';
 import { Icon, loadIcons } from '@iconify/react';
 
-import ProjectDetails from './ProjectDetails.jsx';
-
-const Project = ({
-  title,
-  description,
-  subDescription,
-  links,
-  image,
-  tags,
-  setPreview,
-}) => {
-  const [isHidden, setIsHidden] = useState(false);
-
+const Project = ({ title, slug, image, tags, setPreview }) => {
   loadIcons(['mdi:arrow-right-thick']);
 
   return (
@@ -31,26 +18,15 @@ const Project = ({
             ))}
           </div>
         </div>
-        <button
-          onClick={() => setIsHidden(true)}
+        <a
+          href={`/projects/${slug}`}
           className="flex items-center gap-1 cursor-pointer hover-animation"
         >
           Read More
           <Icon icon="mdi:arrow-right-thick" width="1.25rem" />
-        </button>
+        </a>
       </div>
       <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full" />
-      {isHidden && (
-        <ProjectDetails
-          title={title}
-          description={description}
-          subDescription={subDescription}
-          image={image}
-          tags={tags}
-          links={links}
-          closeModal={() => setIsHidden(false)}
-        />
-      )}
     </>
   );
 };

@@ -1,0 +1,29 @@
+---
+const { media, title } = Astro.props;
+---
+
+<div class="flex flex-col gap-6 lg:gap-8 c-space py-10 lg:py-14">
+  {
+    media.map((item, index) =>
+      item.type === 'video' ? (
+        <video
+          class="w-full rounded-2xl"
+          src={item.src}
+          poster={item.poster}
+          autoplay
+          muted
+          loop
+          playsinline
+          preload={index === 0 ? 'metadata' : 'none'}
+        />
+      ) : (
+        <img
+          class="w-full rounded-2xl"
+          src={item.src}
+          alt={`${title} — image ${index + 1}`}
+          loading={index === 0 ? 'eager' : 'lazy'}
+        />
+      )
+    )
+  }
+</div>

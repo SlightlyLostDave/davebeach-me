@@ -1,0 +1,34 @@
+---
+import Layout from '@/layouts/Layout.astro';
+import Navbar from '@/components/common/Navbar';
+import ProjectInfoPanel from '@/components/projects/ProjectInfoPanel.astro';
+import ProjectMediaRail from '@/components/projects/ProjectMediaRail.astro';
+
+import { projects, basics } from '@cv';
+
+export const prerender = true;
+
+export function getStaticPaths() {
+  return projects.map((project, index) => {
+    const prevProject = projects[(index - 1 + projects.length) % projects.length];
+    const nextProject = projects[(index + 1) % projects.length];
+
+    return {
+      params: { slug: project.slug },
+      props: { project, prevProject, nextProject },
+    };
+  });
+}
+
+const { project, prevProject, nextProject } = Astro.props;
+const { title, description, media, image } = project;
+const railMedia = media?.length ? media : [{ type: 'image', src: image }];
+---
+
+<Layout title={`${title} — ${basics.name}`} description={description}>
+  <Navbar client:load />
+  <main class="pt-16 lg:grid lg:grid-cols-2 lg:items-start">
+    <ProjectInfoPanel project={project} prevProject={prevProject} nextProject={nextProject} />
+    <ProjectMediaRail media={railMedia} title={title} />
+  </main>
+</Layout>

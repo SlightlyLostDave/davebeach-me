@@ -1,0 +1,54 @@
+---
+import ProjectTagsAndLinks from '@/components/projects/ProjectTagsAndLinks.jsx';
+import ProjectCta from '@/components/projects/ProjectCta.astro';
+import { basics } from '@cv';
+
+const { project, prevProject, nextProject } = Astro.props;
+const { title, description, subDescription, tags, links } = project;
+---
+
+<div
+  class="lg:sticky lg:top-16 lg:h-[calc(100vh-4rem)] lg:overflow-y-auto c-space py-10 lg:py-14 flex flex-col gap-8"
+>
+  <a
+    href="/"
+    class="text-sm font-medium text-neutral-400 hover-animation w-fit"
+  >
+    ← {basics.name}
+  </a>
+
+  <div>
+    <h1 class="text-heading">{title}</h1>
+    <p class="mt-4 sub-text">{description}</p>
+  </div>
+
+  <div
+    class="bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full"
+  >
+  </div>
+
+  {
+    subDescription.map((paragraph) => (
+      <p class="mb-4 font-normal text-neutral-400 text-sm">{paragraph}</p>
+    ))
+  }
+
+  <ProjectTagsAndLinks tags={tags} links={links} client:visible />
+
+  <ProjectCta />
+
+  <div class="mt-auto pt-6 flex items-center justify-between gap-4 text-sm">
+    <a
+      href={`/projects/${prevProject.slug}`}
+      class="flex items-center gap-1 hover-animation"
+    >
+      ← {prevProject.title}
+    </a>
+    <a
+      href={`/projects/${nextProject.slug}`}
+      class="flex items-center gap-1 hover-animation text-right"
+    >
+      {nextProject.title} →
+    </a>
+  </div>
+</div>

@@ -29,6 +29,7 @@
   "projects": [
     {
       "title": "Indie Books Atlas",
+      "slug": "indie-books-atlas",
       "description": "A live map of Canada's independently owned bookstores. 791 mapped, and counting.",
       "subDescription": [
         "Canada's independent bookstores are not listed anywhere useful. They open, move, and close without anyone updating a record, and the directories that exist are stale, padded with chains, or both. Indie Books Atlas is the attempt at a better answer. Independents only, no chains and no campus shops, 791 mapped so far and nowhere near done. Tap a pin and you get hours, what the shop actually specializes in, and whether it is worth the detour.",
@@ -84,6 +85,7 @@
     },
     {
       "title": "Northern Venture Drone Services",
+      "slug": "northern-venture-drone-services",
       "description": "Drone and geomatics services out of Kitchener. Video-led, hand-built, no page builder.",
       "subDescription": [
         "Northern Venture is my commercial drone and geomatics practice, running out of Kitchener, Ontario. Aerial mapping, inspection, and 3D capture for construction, mining, agriculture, and heritage preservation.",
@@ -127,6 +129,7 @@
     },
     {
       "title": "Centre Hill Headframe",
+      "slug": "centre-hill-headframe",
       "description": "A headframe that no longer stands, rebuilt in 3D from drone video.",
       "subDescription": [
         "The Centre Hill Gold Mine headframe was captured from a drone on an overcast day, flown manually, video only rather than stills. It has since collapsed, so that footage is the only record that will ever exist of it upright.",
@@ -158,6 +161,7 @@
     },
     {
       "title": "SL Maps Ingestion Pipeline",
+      "slug": "sl-maps-ingestion-pipeline",
       "description": "A pipeline that turns messy QGIS layers into clean geospatial data, one field trip at a time.",
       "subDescription": [
         "SL Maps started as a question about my own field data: years of QGIS placemarks and routes, sorted in some layers and not at all in others, with no consistent path from \"point I dropped in the field\" to something that I can use in a web map. The pipeline is that path. It reads QGIS layers, applies a YAML field mapping so inconsistent source data lands in a consistent schema, and stages everything before it ever touches the database.",

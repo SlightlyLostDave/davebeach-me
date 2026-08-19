@@ -4,11 +4,13 @@ import CV from '@cv';
 
 interface Props {
   title: string;
+  description?: string;
 }
 
-const { title } = Astro.props;
+const { title, description } = Astro.props;
 
 const { summary } = CV.basics;
+const metaDescription = description ?? summary;
 ---
 
 <!doctype html>
@@ -32,7 +34,7 @@ const { summary } = CV.basics;
 
     <title>{title}</title>
 
-    <meta name="description" content={summary} />
+    <meta name="description" content={metaDescription} />
 
     <link rel="icon" href="favicon.ico" type="image/x-icon" />
   </head>

@@ -27,7 +27,7 @@ const Projects = () => {
       <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent mt-12 h-[1px] w-full" />
 
       {projects.map((project) => (
-        <Project key={project.id} {...project} setPreview={setPreview} />
+        <Project key={project.slug} {...project} setPreview={setPreview} />
       ))}
 
       {preview && (

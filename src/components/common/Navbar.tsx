@@ -12,7 +12,7 @@ function Navigation() {
     <ul className="nav-ul">
       {navItems.map((item, index) => (
         <li key={index} className="nav-li">
-          <a className="nav-link" href={`#${item.toLowerCase()}`}>
+          <a className="nav-link" href={`/#${item.toLowerCase()}`}>
             {item}
           </a>
         </li>
@@ -27,9 +27,9 @@ const Navbar = () => {
   loadIcons(['mdi:close']);
 
   return (
-    <div className="fixed inset-x-0 z-20 w-full backdrop-blur-lg bg-base-200/40">
-      <div className="mx-auto c-space max-w-7xl">
-        <div className="flex items-center justify-between py-2 sm:py-0">
+    <div className="fixed inset-x-0 z-20 w-full h-16 backdrop-blur-lg bg-base-200/40 border-b border-white/10">
+      <div className="mx-auto c-space max-w-7xl h-full">
+        <div className="flex items-center justify-between h-full">
           <a
             className="text-xl font-bold transition-colors text-neutral-400 hover:text-white"
             href="/"
