@@ -1,3 +1,4 @@
+import type React from 'react';
 import { useState } from 'react';
 import emailjs from '@emailjs/browser';
 
@@ -16,12 +17,14 @@ const Contact = () => {
   });
   const [isLoading, setIsLoading] = useState(false);
   const [showAlert, setShowAlert] = useState(false);
-  const [alertType, setAlertType] = useState('success');
+  const [alertType, setAlertType] = useState<'success' | 'danger'>('success');
   const [alertMessage, setAlertMessage] = useState('');
-  const handleChange = (e) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-  const showAlertMessage = (type, message) => {
+  const showAlertMessage = (type: 'success' | 'danger', message: string) => {
     setAlertType(type);
     setAlertMessage(message);
     setShowAlert(true);
@@ -29,7 +32,7 @@ const Contact = () => {
       setShowAlert(false);
     }, 5000);
   };
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
 
@@ -120,7 +123,7 @@ const Contact = () => {
               id="message"
               name="message"
               type="text"
-              rows="4"
+              rows={4}
               className="field-input field-input-focus"
               placeholder="Share your thoughts..."
               autoComplete="message"

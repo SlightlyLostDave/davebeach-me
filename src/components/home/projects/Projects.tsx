@@ -1,18 +1,19 @@
+import type React from 'react';
 import { useState } from 'react';
 import { motion, useMotionValue, useSpring } from 'motion/react';
 
 import { projects } from '@cv';
-import Project from './Project.jsx';
+import Project from './Project.tsx';
 
 const Projects = () => {
-  const [preview, setPreview] = useState(null);
+  const [preview, setPreview] = useState<string | null>(null);
 
   const x = useMotionValue(0);
   const y = useMotionValue(0);
   const springX = useSpring(x, { damping: 10, stiffness: 50 });
   const springY = useSpring(y, { damping: 10, stiffness: 50 });
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
     x.set(e.clientX + 20);
     y.set(e.clientY + 20);
   };

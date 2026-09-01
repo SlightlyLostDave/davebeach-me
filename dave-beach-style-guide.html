@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+<link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&family=Raleway:wght@300;400;500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; background: #1b1b1b; color: #eaeaea; font-family: Raleway, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  a { color: #a1c999; text-decoration: none; }
+  a:hover { color: #c8e0c3; }
+  @keyframes dbBlink { 0%, 48% { opacity: 1; } 49%, 100% { opacity: 0; } }
+  @keyframes dbPing { 0% { transform: scale(1); opacity: 0.75; } 100% { transform: scale(2.8); opacity: 0; } }
+  @keyframes dbScan { 0% { transform: translateY(-140%); } 100% { transform: translateY(560%); } }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</helmet>
+
+<div style="width:100%;background:#1b1b1b;color:#eaeaea;overflow-x:hidden">
+
+  <div style="position:sticky;top:0;z-index:40;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 24px;height:56px;background:rgb(27 27 27 / 0.9);backdrop-filter:blur(14px);border-bottom:1px solid oklch(1 0 0 / 0.09)">
+    <span style="font:600 12px/1 'IBM Plex Mono',monospace;letter-spacing:0.18em;text-transform:uppercase;white-space:nowrap;flex:0 0 auto">DB / SG</span>
+    <div style="display:flex;align-items:center;gap:18px;min-width:0;flex:1 1 auto;justify-content:flex-end;overflow-x:auto;scrollbar-width:none">
+      <a href="#color" style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.14em;text-transform:uppercase;color:#b4b4b4;white-space:nowrap;flex:0 0 auto" style-hover="color:#eaeaea">Color</a>
+      <a href="#type" style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.14em;text-transform:uppercase;color:#b4b4b4;white-space:nowrap;flex:0 0 auto" style-hover="color:#eaeaea">Type</a>
+      <a href="#grid" style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.14em;text-transform:uppercase;color:#b4b4b4;white-space:nowrap;flex:0 0 auto" style-hover="color:#eaeaea">Grid</a>
+      <a href="#motifs" style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.14em;text-transform:uppercase;color:#b4b4b4;white-space:nowrap;flex:0 0 auto" style-hover="color:#eaeaea">Motifs</a>
+      <a href="#components" style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.14em;text-transform:uppercase;color:#b4b4b4;white-space:nowrap;flex:0 0 auto" style-hover="color:#eaeaea">Components</a>
+      <a href="#motion" style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.14em;text-transform:uppercase;color:#b4b4b4;white-space:nowrap;flex:0 0 auto" style-hover="color:#eaeaea">Motion</a>
+      <a href="#applied" style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.14em;text-transform:uppercase;color:#b4b4b4;white-space:nowrap;flex:0 0 auto" style-hover="color:#eaeaea">Applied</a>
+      <a href="#departures" style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.14em;text-transform:uppercase;color:#b4b4b4;white-space:nowrap;flex:0 0 auto" style-hover="color:#eaeaea">Departures</a>
+      <a href="#rules" style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.14em;text-transform:uppercase;color:#b4b4b4;white-space:nowrap;flex:0 0 auto" style-hover="color:#eaeaea">Rules</a>
+    </div>
+  </div>
+
+  <section data-screen-label="00 Cover" style="position:relative;padding:112px 56px 88px;border-bottom:1px solid oklch(1 0 0 / 0.09);overflow:hidden">
+    <div style="position:absolute;inset:0;pointer-events:none;background-image:repeating-radial-gradient(circle at 84% 14%, transparent 0 32px, rgb(161 201 153 / 0.10) 32px 33px),repeating-radial-gradient(circle at 97% 66%, transparent 0 46px, rgb(201 161 106 / 0.07) 46px 47px)"></div>
+    <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(100deg, #1b1b1b 0%, rgb(27 27 27 / 0.88) 44%, transparent 80%)"></div>
+    <div style="position:relative;max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:38px">
+      <div style="display:flex;align-items:center;gap:14px">
+        <span style="position:relative;display:inline-flex;width:9px;height:9px"><span style="position:absolute;inset:0;border-radius:50%;background:#a1c999"></span><span style="position:absolute;inset:0;border-radius:50%;border:1px solid #a1c999;animation:dbPing 2.6s ease-out infinite"></span></span>
+        <span style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.2em;text-transform:uppercase;color:#bcbcbc">Design system — one direction, v1.0</span>
+      </div>
+      <h1 style="margin:0;font:700 82px/0.95 Cabin,Helvetica,sans-serif;letter-spacing:-0.035em;max-width:960px;text-wrap:balance">Code, cartography,<br />and the field notes between.</h1>
+      <p style="margin:0;max-width:640px;font:400 19px/1.62 Raleway,Helvetica,sans-serif;color:#d4d4d4;text-wrap:pretty">A visual language for a portfolio that has to read as an engineer's and a surveyor's at once. Everything below comes from a small set of decisions: the colour and type tokens already in <code style="font:400 17px/1 'IBM Plex Mono',monospace;color:#a1c999">global.css</code>, a mono face added as the metadata voice, hairlines instead of shadows, and motion that behaves like an instrument rather than an animation. Five deliberate departures from the shipped site are listed at the end.</p>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:oklch(1 0 0 / 0.09);border:1px solid oklch(1 0 0 / 0.09);max-width:1040px">
+        <div style="background:#242424;padding:18px 20px;display:flex;flex-direction:column;gap:8px">
+          <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#aaaaaa">Origin</span>
+          <span style="font:500 14px/1.3 'IBM Plex Mono',monospace">43.4516°N 80.4925°W</span>
+        </div>
+        <div style="background:#242424;padding:18px 20px;display:flex;flex-direction:column;gap:8px">
+          <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#aaaaaa">Locale</span>
+          <span style="font:500 14px/1.3 'IBM Plex Mono',monospace">Kitchener, ON — remote</span>
+        </div>
+        <div style="background:#242424;padding:18px 20px;display:flex;flex-direction:column;gap:8px">
+          <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#aaaaaa">Typefaces</span>
+          <span style="font:500 14px/1.3 'IBM Plex Mono',monospace">Cabin / Raleway / Mono</span>
+        </div>
+        <div style="background:#242424;padding:18px 20px;display:flex;flex-direction:column;gap:8px">
+          <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#aaaaaa">Base unit</span>
+          <span style="font:500 14px/1.3 'IBM Plex Mono',monospace">4px — 64px cell</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section data-screen-label="01 Principles" style="padding:80px 56px;border-bottom:1px solid oklch(1 0 0 / 0.09)">
+    <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:36px">
+      <div style="display:flex;align-items:baseline;gap:18px">
+        <span style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.18em;color:#a1c999">01</span>
+        <h2 style="margin:0;font:600 34px/1.1 Cabin,Helvetica,sans-serif;letter-spacing:-0.02em">Principles</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px">
+        <div style="display:flex;flex-direction:column;gap:11px;padding:24px;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-top:2px solid #a1c999;border-radius:3px">
+          <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;color:#aaaaaa">P—01</span>
+          <h3 style="margin:0;font:600 19px/1.25 Cabin,Helvetica,sans-serif;letter-spacing:-0.01em">Instrumented, not decorated</h3>
+          <p style="margin:0;font:400 14px/1.6 Raleway,Helvetica,sans-serif;color:#cccccc;text-wrap:pretty">Every ornament carries information — a coordinate, a date, a stack, a status. If a mark says nothing, delete it.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:11px;padding:24px;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-top:2px solid #c9a16a;border-radius:3px">
+          <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;color:#aaaaaa">P—02</span>
+          <h3 style="margin:0;font:600 19px/1.25 Cabin,Helvetica,sans-serif;letter-spacing:-0.01em">Hairlines, not shadows</h3>
+          <p style="margin:0;font:400 14px/1.6 Raleway,Helvetica,sans-serif;color:#cccccc;text-wrap:pretty">Structure comes from 1px rules and flat surfaces, the way a drawing sheet does. No drop shadows, no glass, no glow.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:11px;padding:24px;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-top:2px solid #a1c999;border-radius:3px">
+          <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;color:#aaaaaa">P—03</span>
+          <h3 style="margin:0;font:600 19px/1.25 Cabin,Helvetica,sans-serif;letter-spacing:-0.01em">Mono is the metadata voice</h3>
+          <p style="margin:0;font:400 14px/1.6 Raleway,Helvetica,sans-serif;color:#cccccc;text-wrap:pretty">Prose is grotesk. Anything a machine would emit — labels, dates, coords, stacks, statuses — is mono, tracked out, often uppercase.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:11px;padding:24px;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-top:2px solid #c9a16a;border-radius:3px">
+          <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;color:#aaaaaa">P—04</span>
+          <h3 style="margin:0;font:600 19px/1.25 Cabin,Helvetica,sans-serif;letter-spacing:-0.01em">Motion reads as measurement</h3>
+          <p style="margin:0;font:400 14px/1.6 Raleway,Helvetica,sans-serif;color:#cccccc;text-wrap:pretty">Transitions are short and directional — a sweep, a scan, a snap to grid. No bounce, no float, no parallax drift.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="color" data-screen-label="02 Color" style="padding:80px 56px;border-bottom:1px solid oklch(1 0 0 / 0.09)">
+    <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:40px">
+      <div style="display:flex;align-items:baseline;gap:18px;flex-wrap:wrap">
+        <span style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.18em;color:#a1c999">02</span>
+        <h2 style="margin:0;font:600 34px/1.1 Cabin,Helvetica,sans-serif;letter-spacing:-0.02em">Color</h2>
+        <p style="margin:0 0 0 auto;max-width:470px;font:400 14px/1.6 Raleway,Helvetica,sans-serif;color:#c6c6c6;text-wrap:pretty">Every value here is the token already shipping in <code style="font:400 13px/1 'IBM Plex Mono',monospace;color:#a1c999">src/styles/global.css</code> — primary, secondary, accent, base-100, and the two text colors — with four derived neutral steps added to give cards, hover, and rules somewhere to sit. Nothing in this row is invented.</p>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <span style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.18em;text-transform:uppercase;color:#aaaaaa">Neutrals — base-100 and derived steps</span>
+        <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:12px">
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <div style="height:100px;background:#1b1b1b;border:1px solid oklch(1 0 0 / 0.13);border-radius:3px"></div>
+            <span style="font:600 12px/1.2 Cabin,Helvetica,sans-serif">base</span>
+            <span style="font:400 10px/1.5 'IBM Plex Mono',monospace;color:#aaaaaa">--color-base-100<br />#1b1b1b — page</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <div style="height:100px;background:#242424;border:1px solid oklch(1 0 0 / 0.13);border-radius:3px"></div>
+            <span style="font:600 12px/1.2 Cabin,Helvetica,sans-serif">surface</span>
+            <span style="font:400 10px/1.5 'IBM Plex Mono',monospace;color:#aaaaaa">derived +1<br />#242424 — cards</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <div style="height:100px;background:#2e2e2e;border:1px solid oklch(1 0 0 / 0.13);border-radius:3px"></div>
+            <span style="font:600 12px/1.2 Cabin,Helvetica,sans-serif">raised</span>
+            <span style="font:400 10px/1.5 'IBM Plex Mono',monospace;color:#aaaaaa">derived +2<br />#2e2e2e — hover</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <div style="height:100px;background:#5a5a5a;border:1px solid oklch(1 0 0 / 0.13);border-radius:3px"></div>
+            <span style="font:600 12px/1.2 Cabin,Helvetica,sans-serif">faint</span>
+            <span style="font:400 10px/1.5 'IBM Plex Mono',monospace;color:#aaaaaa">derived +3<br />#5a5a5a — rules</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <div style="height:100px;background:#aaaaaa;border:1px solid oklch(1 0 0 / 0.13);border-radius:3px"></div>
+            <span style="font:600 12px/1.2 Cabin,Helvetica,sans-serif">label</span>
+            <span style="font:400 10px/1.5 'IBM Plex Mono',monospace;color:#aaaaaa">--color-text-secondary<br />#aaaaaa — metadata</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <div style="height:100px;background:#cccccc;border:1px solid oklch(1 0 0 / 0.13);border-radius:3px"></div>
+            <span style="font:600 12px/1.2 Cabin,Helvetica,sans-serif">body</span>
+            <span style="font:400 10px/1.5 'IBM Plex Mono',monospace;color:#aaaaaa">derived +5<br />#cccccc — body copy</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:9px">
+            <div style="height:100px;background:#eaeaea;border:1px solid oklch(1 0 0 / 0.13);border-radius:3px"></div>
+            <span style="font:600 12px/1.2 Cabin,Helvetica,sans-serif">ink</span>
+            <span style="font:400 10px/1.5 'IBM Plex Mono',monospace;color:#aaaaaa">--color-text-primary<br />#eaeaea — headings</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1.15fr 1fr;gap:32px;align-items:start">
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <span style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.18em;text-transform:uppercase;color:#aaaaaa">Accents — as defined in global.css</span>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">
+            <div style="display:flex;flex-direction:column;gap:9px">
+              <div style="height:124px;background:#a1c999;border-radius:3px;display:flex;align-items:flex-end;padding:14px">
+                <span style="font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.14em;text-transform:uppercase;color:#1b1b1b">Primary — sage</span>
+              </div>
+              <span style="font:400 10px/1.5 'IBM Plex Mono',monospace;color:#aaaaaa">--color-primary — #a1c999<br />primary action, links, active state, index</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:9px">
+              <div style="height:124px;background:#c9a16a;border-radius:3px;display:flex;align-items:flex-end;padding:14px">
+                <span style="font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.14em;text-transform:uppercase;color:#1b1b1b">Secondary — clay</span>
+              </div>
+              <span style="font:400 10px/1.5 'IBM Plex Mono',monospace;color:#aaaaaa">--color-secondary — #c9a16a<br />secondary marks, dates, survey rules</span>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;padding:16px 18px;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-radius:3px">
+            <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#aaaaaa">Ratio — 60 / 30 / 8 / 2</span>
+            <p style="margin:0;font:400 14px/1.6 Raleway,Helvetica,sans-serif;color:#d4d4d4;text-wrap:pretty">Base 60, surface 30, sage 8, clay 2. Sage is the one thing you're meant to click or read as live data; clay is a quieter register for dates, section marks, and topographic linework. The third shipped token, <code style="font:400 13px/1 'IBM Plex Mono',monospace;color:#ffd166">--color-accent #ffd166</code>, is the one colour this guide proposes retiring — see Departures.</p>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:10px">
+            <span style="padding:7px 12px;border-radius:3px;background:rgb(161 201 153 / 0.14);border:1px solid rgb(161 201 153 / 0.35);font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.1em;color:#bcd9b6">#a1c999 at 13% — tag fill</span>
+            <span style="padding:7px 12px;border-radius:3px;background:rgb(201 161 106 / 0.14);border:1px solid rgb(201 161 106 / 0.35);font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.1em;color:#dcc094">#c9a16a at 13% — tag fill</span>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <span style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.18em;text-transform:uppercase;color:#aaaaaa">Hypsometric ramp — data only</span>
+          <div style="display:flex;height:42px;border-radius:3px;overflow:hidden;border:1px solid oklch(1 0 0 / 0.1)">
+            <div style="flex:1;background:oklch(0.46 0.055 200)"></div>
+            <div style="flex:1;background:oklch(0.58 0.06 175)"></div>
+            <div style="flex:1;background:oklch(0.70 0.07 155)"></div>
+            <div style="flex:1;background:#a1c999"></div>
+            <div style="flex:1;background:oklch(0.85 0.08 100)"></div>
+            <div style="flex:1;background:#c9a16a"></div>
+          </div>
+          <div style="display:flex;justify-content:space-between">
+            <span style="font:400 10px/1 'IBM Plex Mono',monospace;color:#aaaaaa">low</span>
+            <span style="font:400 10px/1 'IBM Plex Mono',monospace;color:#aaaaaa">high</span>
+          </div>
+          <p style="margin:0;font:400 13px/1.6 Raleway,Helvetica,sans-serif;color:#c6c6c6;text-wrap:pretty">Six steps that pass through both accents, reserved for charts, maps, and legends. The moment a ramp color lands on a button, the ramp stops meaning elevation.</p>
+          <div style="display:flex;flex-direction:column;gap:10px;padding:16px 18px;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-radius:3px">
+            <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#aaaaaa">Status</span>
+            <div style="display:flex;flex-wrap:wrap;gap:14px">
+              <span style="display:inline-flex;align-items:center;gap:7px;font:400 11px/1 'IBM Plex Mono',monospace;color:#d6d6d6"><span style="width:7px;height:7px;border-radius:50%;background:#a1c999"></span>live</span>
+              <span style="display:inline-flex;align-items:center;gap:7px;font:400 11px/1 'IBM Plex Mono',monospace;color:#d6d6d6"><span style="width:7px;height:7px;border-radius:50%;background:#c9a16a"></span>in&nbsp;progress</span>
+              <span style="display:inline-flex;align-items:center;gap:7px;font:400 11px/1 'IBM Plex Mono',monospace;color:#d6d6d6"><span style="width:7px;height:7px;border-radius:50%;background:#6b6b6b"></span>archived</span>
+            </div>
+            <p style="margin:0;font:400 12px/1.6 Raleway,Helvetica,sans-serif;color:#c2c2c2">Status is always dot plus word — never color alone.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="type" data-screen-label="03 Typography" style="padding:80px 56px;border-bottom:1px solid oklch(1 0 0 / 0.09)">
+    <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:36px">
+      <div style="display:flex;align-items:baseline;gap:18px">
+        <span style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.18em;color:#a1c999">03</span>
+        <h2 style="margin:0;font:600 34px/1.1 Cabin,Helvetica,sans-serif;letter-spacing:-0.02em">Typography</h2>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+        <div style="display:flex;flex-direction:column;gap:13px;padding:24px;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-radius:3px">
+          <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#aaaaaa">Display — --font-display</span>
+          <span style="font:600 52px/1 Cabin,Helvetica,sans-serif;letter-spacing:-0.03em">Cabin</span>
+          <p style="margin:0;font:400 13px/1.6 Raleway,Helvetica,sans-serif;color:#cccccc;text-wrap:pretty">The shipped display face, kept as-is. Tracking −0.02 to −0.035em at display sizes, normal below 22px. The current site uppercases all headings via <code style="font:400 12px/1 'IBM Plex Mono',monospace;color:#a1c999">.text-heading</code>; this guide reserves uppercase for mono labels instead.</p>
+          <span style="font:400 21px/1.3 Cabin,Helvetica,sans-serif;color:#e6e6e6">ABCDEFGHIJKLM 0123456789</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:13px;padding:24px;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-radius:3px">
+          <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#aaaaaa">Paragraph — --font-paragraph</span>
+          <span style="font:400 52px/1 Raleway,Helvetica,sans-serif;letter-spacing:-0.02em">Raleway</span>
+          <p style="margin:0;font:400 13px/1.6 Raleway,Helvetica,sans-serif;color:#cccccc;text-wrap:pretty">300 / 400 / 500. The shipped body face, kept as-is. 15/25 for default copy, 18/29 for ledes, 60–70ch measure. Never used above 22px — that range belongs to Cabin.</p>
+          <span style="font:400 19px/1.3 Raleway,Helvetica,sans-serif;color:#e6e6e6">Aerial survey, 2.4 cm/px</span>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:13px;padding:24px;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-radius:3px">
+          <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#aaaaaa">Data — added in v1.0</span>
+          <span style="font:500 52px/1 'IBM Plex Mono',monospace;letter-spacing:-0.02em">Plex Mono</span>
+          <p style="margin:0;font:400 13px/1.6 Raleway,Helvetica,sans-serif;color:#cccccc;text-wrap:pretty">400 / 500 / 600. Not in the current stack — the one addition to the type system, and the device that carries the GIS half of the brief. Uppercase and tracked +0.14 to +0.2em as a label; natural case for coords, code, and figures.</p>
+          <span style="font:400 21px/1.3 'IBM Plex Mono',monospace;color:#e6e6e6">43.4516°N 80.4925°W</span>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:1px;background:oklch(1 0 0 / 0.08);border:1px solid oklch(1 0 0 / 0.08);border-radius:3px">
+        <div style="display:grid;grid-template-columns:1fr 290px;gap:24px;align-items:baseline;padding:20px 24px;background:#212121">
+          <span style="font:700 72px/0.95 Cabin,Helvetica,sans-serif;letter-spacing:-0.035em">Display XL</span>
+          <span style="font:400 11px/1.7 'IBM Plex Mono',monospace;color:#aaaaaa">Cabin 700 — 72/68 — −0.035em<br />hero only, one per page</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 290px;gap:24px;align-items:baseline;padding:20px 24px;background:#212121">
+          <span style="font:600 50px/1 Cabin,Helvetica,sans-serif;letter-spacing:-0.028em">Display L</span>
+          <span style="font:400 11px/1.7 'IBM Plex Mono',monospace;color:#aaaaaa">Cabin 600 — 50/50 — −0.028em<br />section openers, project titles</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 290px;gap:24px;align-items:baseline;padding:20px 24px;background:#212121">
+          <span style="font:600 34px/1.1 Cabin,Helvetica,sans-serif;letter-spacing:-0.02em">Heading 1</span>
+          <span style="font:400 11px/1.7 'IBM Plex Mono',monospace;color:#aaaaaa">Cabin 600 — 34/37 — −0.02em<br />section headings</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 290px;gap:24px;align-items:baseline;padding:20px 24px;background:#212121">
+          <span style="font:600 24px/1.2 Cabin,Helvetica,sans-serif;letter-spacing:-0.012em">Heading 2</span>
+          <span style="font:400 11px/1.7 'IBM Plex Mono',monospace;color:#aaaaaa">Cabin 600 — 24/29 — −0.012em<br />card titles, role titles</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 290px;gap:24px;align-items:baseline;padding:20px 24px;background:#212121">
+          <span style="font:600 18px/1.3 Cabin,Helvetica,sans-serif">Heading 3</span>
+          <span style="font:400 11px/1.7 'IBM Plex Mono',monospace;color:#aaaaaa">Cabin 600 — 18/23<br />sub-headings, company names</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 290px;gap:24px;align-items:baseline;padding:20px 24px;background:#212121">
+          <span style="font:400 18px/1.62 Raleway,Helvetica,sans-serif;color:#e2e2e2">Body large — lede paragraphs, 60ch measure</span>
+          <span style="font:400 11px/1.7 'IBM Plex Mono',monospace;color:#aaaaaa">Raleway 400 — 18/29<br />intro copy only</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 290px;gap:24px;align-items:baseline;padding:20px 24px;background:#212121">
+          <span style="font:400 15px/1.65 Raleway,Helvetica,sans-serif;color:#d6d6d6">Body — the default. Bullets, descriptions, form help. 70ch measure.</span>
+          <span style="font:400 11px/1.7 'IBM Plex Mono',monospace;color:#aaaaaa">Raleway 400 — 15/25<br />everything else</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 290px;gap:24px;align-items:baseline;padding:20px 24px;background:#212121">
+          <span style="font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.18em;text-transform:uppercase;color:#a1c999">Label mono</span>
+          <span style="font:400 11px/1.7 'IBM Plex Mono',monospace;color:#aaaaaa">Plex Mono 600 — 11/13 — +0.18em<br />eyebrows, tags, table heads</span>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 290px;gap:24px;align-items:baseline;padding:20px 24px;background:#212121">
+          <span style="font:400 13px/1.4 'IBM Plex Mono',monospace;color:#dedede">Data mono — 43.4516, −80.4925 · EPSG:4326 · 2024-06-11</span>
+          <span style="font:400 11px/1.7 'IBM Plex Mono',monospace;color:#aaaaaa">Plex Mono 400 — 13/18<br />coords, dates, figures</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="grid" data-screen-label="04 Grid and space" style="padding:80px 56px;border-bottom:1px solid oklch(1 0 0 / 0.09)">
+    <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:36px">
+      <div style="display:flex;align-items:baseline;gap:18px">
+        <span style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.18em;color:#a1c999">04</span>
+        <h2 style="margin:0;font:600 34px/1.1 Cabin,Helvetica,sans-serif;letter-spacing:-0.02em">Grid, space, edges</h2>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1.4fr 1fr;gap:24px;align-items:start">
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <span style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.18em;text-transform:uppercase;color:#aaaaaa">12 columns — 24px gutter — 1200 max — 20/40/60px margin</span>
+          <div style="height:170px;border:1px solid oklch(1 0 0 / 0.1);border-radius:3px;background:#212121;padding:16px;display:grid;grid-template-columns:repeat(12,1fr);gap:8px">
+            <div style="background:rgb(161 201 153 / 0.14);border-top:2px solid #a1c999"></div>
+            <div style="background:rgb(161 201 153 / 0.14);border-top:2px solid #a1c999"></div>
+            <div style="background:rgb(161 201 153 / 0.14);border-top:2px solid #a1c999"></div>
+            <div style="background:rgb(161 201 153 / 0.14);border-top:2px solid #a1c999"></div>
+            <div style="background:rgb(161 201 153 / 0.14);border-top:2px solid #a1c999"></div>
+            <div style="background:rgb(161 201 153 / 0.14);border-top:2px solid #a1c999"></div>
+            <div style="background:rgb(161 201 153 / 0.14);border-top:2px solid #a1c999"></div>
+            <div style="background:rgb(161 201 153 / 0.14);border-top:2px solid #a1c999"></div>
+            <div style="background:rgb(161 201 153 / 0.14);border-top:2px solid #a1c999"></div>
+            <div style="background:rgb(161 201 153 / 0.14);border-top:2px solid #a1c999"></div>
+            <div style="background:rgb(161 201 153 / 0.14);border-top:2px solid #a1c999"></div>
+            <div style="background:rgb(161 201 153 / 0.14);border-top:2px solid #a1c999"></div>
+          </div>
+          <p style="margin:0;font:400 14px/1.6 Raleway,Helvetica,sans-serif;color:#cccccc;text-wrap:pretty">Standard spans: prose 7 columns, small cards 3, project cards 6, timeline body 8 against a 4-column mono gutter. Page margins follow the shipped <code style="font:400 12px/1 'IBM Plex Mono',monospace;color:#a1c999">.c-space</code> ramp (20 / 40 / 60px). Section rhythm becomes 80px vertical padding with a hairline rule between — replacing the current <code style="font:400 12px/1 'IBM Plex Mono',monospace;color:#a1c999">.section-spacing</code> min-height:100vh, which forces air even where a section has little to say.</p>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <span style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.18em;text-transform:uppercase;color:#aaaaaa">Space scale — 4px base</span>
+          <div style="display:flex;flex-direction:column;gap:8px">
+            <div style="display:flex;align-items:center;gap:14px"><span style="width:40px;font:400 11px/1 'IBM Plex Mono',monospace;color:#aaaaaa">4</span><span style="height:10px;width:4px;background:#a1c999"></span></div>
+            <div style="display:flex;align-items:center;gap:14px"><span style="width:40px;font:400 11px/1 'IBM Plex Mono',monospace;color:#aaaaaa">8</span><span style="height:10px;width:8px;background:#a1c999"></span></div>
+            <div style="display:flex;align-items:center;gap:14px"><span style="width:40px;font:400 11px/1 'IBM Plex Mono',monospace;color:#aaaaaa">12</span><span style="height:10px;width:12px;background:#a1c999"></span></div>
+            <div style="display:flex;align-items:center;gap:14px"><span style="width:40px;font:400 11px/1 'IBM Plex Mono',monospace;color:#aaaaaa">16</span><span style="height:10px;width:16px;background:#a1c999"></span></div>
+            <div style="display:flex;align-items:center;gap:14px"><span style="width:40px;font:400 11px/1 'IBM Plex Mono',monospace;color:#aaaaaa">24</span><span style="height:10px;width:24px;background:#a1c999"></span></div>
+            <div style="display:flex;align-items:center;gap:14px"><span style="width:40px;font:400 11px/1 'IBM Plex Mono',monospace;color:#aaaaaa">32</span><span style="height:10px;width:32px;background:#a1c999"></span></div>
+            <div style="display:flex;align-items:center;gap:14px"><span style="width:40px;font:400 11px/1 'IBM Plex Mono',monospace;color:#aaaaaa">48</span><span style="height:10px;width:48px;background:#a1c999"></span></div>
+            <div style="display:flex;align-items:center;gap:14px"><span style="width:40px;font:400 11px/1 'IBM Plex Mono',monospace;color:#aaaaaa">64</span><span style="height:10px;width:64px;background:#a1c999"></span></div>
+            <div style="display:flex;align-items:center;gap:14px"><span style="width:40px;font:400 11px/1 'IBM Plex Mono',monospace;color:#aaaaaa">80</span><span style="height:10px;width:80px;background:#a1c999"></span></div>
+            <div style="display:flex;align-items:center;gap:14px"><span style="width:40px;font:400 11px/1 'IBM Plex Mono',monospace;color:#aaaaaa">128</span><span style="height:10px;width:128px;background:#a1c999"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+        <div style="display:flex;flex-direction:column;gap:14px;padding:24px;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-radius:3px">
+          <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#aaaaaa">Radii — 0 / 3 / 8 / pill</span>
+          <div style="display:flex;align-items:flex-end;gap:12px">
+            <div style="width:48px;height:48px;background:#333333;border:1px solid oklch(1 0 0 / 0.12)"></div>
+            <div style="width:48px;height:48px;background:#333333;border:1px solid oklch(1 0 0 / 0.12);border-radius:3px"></div>
+            <div style="width:48px;height:48px;background:#333333;border:1px solid oklch(1 0 0 / 0.12);border-radius:8px"></div>
+            <div style="width:68px;height:28px;background:#333333;border:1px solid oklch(1 0 0 / 0.12);border-radius:999px"></div>
+          </div>
+          <p style="margin:0;font:400 13px/1.6 Raleway,Helvetica,sans-serif;color:#c8c8c8;text-wrap:pretty">3px is the default — enough to feel drawn, not enough to feel soft. 8px only on media frames; pills only on tags.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px;padding:24px;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-radius:3px">
+          <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#aaaaaa">Borders</span>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <div style="height:1px;background:oklch(1 0 0 / 0.08)"></div>
+            <span style="font:400 11px/1 'IBM Plex Mono',monospace;color:#aaaaaa">hairline — white 8%</span>
+            <div style="height:1px;background:oklch(1 0 0 / 0.16)"></div>
+            <span style="font:400 11px/1 'IBM Plex Mono',monospace;color:#aaaaaa">emphasis — white 16%</span>
+            <div style="height:2px;background:#a1c999"></div>
+            <span style="font:400 11px/1 'IBM Plex Mono',monospace;color:#aaaaaa">marker — sage 2px</span>
+            <div style="height:1px;background:repeating-linear-gradient(to right, #c9a16a 0 6px, transparent 6px 12px)"></div>
+            <span style="font:400 11px/1 'IBM Plex Mono',monospace;color:#aaaaaa">survey dash — clay</span>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px;padding:24px;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-radius:3px">
+          <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#aaaaaa">Focus — always visible</span>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <span style="align-self:flex-start;padding:11px 18px;border-radius:3px;background:#a1c999;color:#1b1b1b;font:600 13px/1 Cabin,Helvetica,sans-serif;outline:2px solid #a1c999;outline-offset:3px">Focused button</span>
+            <span style="align-self:flex-start;padding:11px 14px;border-radius:3px;background:#1b1b1b;border:1px solid oklch(1 0 0 / 0.16);color:#eaeaea;font:400 13px/1 'IBM Plex Mono',monospace;outline:2px solid #a1c999;outline-offset:3px">Focused input</span>
+          </div>
+          <p style="margin:0;font:400 13px/1.6 Raleway,Helvetica,sans-serif;color:#c8c8c8;text-wrap:pretty">2px sage outline, 3px offset, on every interactive element. Never removed, never replaced by a color shift alone.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="motifs" data-screen-label="05 Motifs" style="padding:80px 56px;border-bottom:1px solid oklch(1 0 0 / 0.09)">
+    <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:36px">
+      <div style="display:flex;align-items:baseline;gap:18px;flex-wrap:wrap">
+        <span style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.18em;color:#a1c999">05</span>
+        <h2 style="margin:0;font:600 34px/1.1 Cabin,Helvetica,sans-serif;letter-spacing:-0.02em">Motifs</h2>
+        <p style="margin:0 0 0 auto;max-width:470px;font:400 14px/1.6 Raleway,Helvetica,sans-serif;color:#c6c6c6;text-wrap:pretty">Six devices, all built from CSS gradients and text — no illustration, nothing to maintain. Budget: at most two motifs per screen, one per section. Figures in M—05 and M—06 are generic examples, not project data.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+        <div style="display:flex;flex-direction:column;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-radius:3px;overflow:hidden">
+          <div style="height:140px;background-image:repeating-radial-gradient(circle at 30% 120%, transparent 0 22px, rgb(161 201 153 / 0.30) 22px 23px),repeating-radial-gradient(circle at 88% -10%, transparent 0 30px, rgb(201 161 106 / 0.22) 30px 31px);background-color:#1f1f1f"></div>
+          <div style="display:flex;flex-direction:column;gap:8px;padding:18px 20px">
+            <span style="font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#a1c999">M—01 Contours</span>
+            <p style="margin:0;font:400 13px/1.6 Raleway,Helvetica,sans-serif;color:#cacaca;text-wrap:pretty">Concentric hairlines at 20–46px intervals, 8–30% opacity. Section backgrounds and card headers. Never behind body copy.</p>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-radius:3px;overflow:hidden">
+          <div style="height:140px;background-color:#1f1f1f;background-image:repeating-linear-gradient(to right, oklch(1 0 0 / 0.07) 0 1px, transparent 1px 32px),repeating-linear-gradient(to bottom, oklch(1 0 0 / 0.07) 0 1px, transparent 1px 32px),repeating-linear-gradient(to right, rgb(161 201 153 / 0.22) 0 1px, transparent 1px 128px),repeating-linear-gradient(to bottom, rgb(161 201 153 / 0.22) 0 1px, transparent 1px 128px)"></div>
+          <div style="display:flex;flex-direction:column;gap:8px;padding:18px 20px">
+            <span style="font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#a1c999">M—02 Graticule</span>
+            <p style="margin:0;font:400 13px/1.6 Raleway,Helvetica,sans-serif;color:#cacaca;text-wrap:pretty">32px minor / 128px major grid. The major line is sage at 22%; minor is white at 7%. Use for empty states and map frames.</p>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-radius:3px;overflow:hidden">
+          <div style="position:relative;height:140px;background-color:#1f1f1f;background-image:linear-gradient(oklch(1 0 0 / 0.04) 1px, transparent 1px),linear-gradient(90deg, oklch(1 0 0 / 0.04) 1px, transparent 1px);background-size:16px 16px">
+            <div style="position:absolute;left:0;right:0;top:50%;height:1px;background:rgb(161 201 153 / 0.55)"></div>
+            <div style="position:absolute;top:0;bottom:0;left:50%;width:1px;background:rgb(161 201 153 / 0.55)"></div>
+            <div style="position:absolute;left:50%;top:50%;width:34px;height:34px;margin:-17px 0 0 -17px;border:1px solid #a1c999;border-radius:50%"></div>
+            <span style="position:absolute;left:calc(50% + 26px);top:calc(50% + 12px);font:400 10px/1 'IBM Plex Mono',monospace;color:#a1c999">43.4516, -80.4925</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;padding:18px 20px">
+            <span style="font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#a1c999">M—03 Survey mark</span>
+            <p style="margin:0;font:400 13px/1.6 Raleway,Helvetica,sans-serif;color:#cacaca;text-wrap:pretty">Crosshair plus ring plus a coordinate in mono. Marks one point of interest per image or map — never more.</p>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-radius:3px;overflow:hidden">
+          <div style="height:140px;background-color:#1f1f1f;background-image:linear-gradient(45deg, oklch(1 0 0 / 0.05) 25%, transparent 25% 50%, oklch(1 0 0 / 0.05) 50% 75%, transparent 75%);background-size:22px 22px;display:flex;align-items:flex-end;padding:14px">
+            <span style="font:400 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.1em;color:#b4b4b4">[ orthomosaic — drop image ]</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;padding:18px 20px">
+            <span style="font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#a1c999">M—04 Raster tile</span>
+            <p style="margin:0;font:400 13px/1.6 Raleway,Helvetica,sans-serif;color:#cacaca;text-wrap:pretty">A 22px checker standing in for imagery, with a mono caption naming what belongs there. Every image slot ships with one.</p>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-radius:3px;overflow:hidden">
+          <div style="height:140px;background:#141414;padding:16px;display:flex;flex-direction:column;gap:7px;justify-content:center">
+            <span style="font:400 12px/1.4 'IBM Plex Mono',monospace;color:#b4b4b4"><span style="color:#a1c999">dave@field</span> ~ % </span>
+            <span style="font:400 12px/1.4 'IBM Plex Mono',monospace;color:#eaeaea">{{ termLine }}<span style="display:inline-block;width:7px;height:14px;margin-left:2px;vertical-align:-2px;background:#a1c999;animation:dbBlink 1.1s step-end infinite"></span></span>
+            <span style="font:400 12px/1.4 'IBM Plex Mono',monospace;color:#c9a16a">→ 4 layers, 1.2 GB, EPSG:2958</span>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;padding:18px 20px">
+            <span style="font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#a1c999">M—05 Terminal</span>
+            <p style="margin:0;font:400 13px/1.6 Raleway,Helvetica,sans-serif;color:#cacaca;text-wrap:pretty">A real command, a real result. One per page maximum — in the hero or a project detail, never as chrome.</p>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-radius:3px;overflow:hidden">
+          <div style="height:140px;background:#1f1f1f;padding:16px;display:flex;flex-direction:column;gap:10px;justify-content:center">
+            <div style="display:flex;justify-content:space-between;border-bottom:1px solid oklch(1 0 0 / 0.08);padding-bottom:7px">
+              <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.14em;text-transform:uppercase;color:#aaaaaa">CRS</span>
+              <span style="font:400 11px/1 'IBM Plex Mono',monospace;color:#e6e6e6">EPSG:2958</span>
+            </div>
+            <div style="display:flex;justify-content:space-between;border-bottom:1px solid oklch(1 0 0 / 0.08);padding-bottom:7px">
+              <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.14em;text-transform:uppercase;color:#aaaaaa">GSD</span>
+              <span style="font:400 11px/1 'IBM Plex Mono',monospace;color:#e6e6e6">2.4 cm/px</span>
+            </div>
+            <div style="display:flex;justify-content:space-between">
+              <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.14em;text-transform:uppercase;color:#aaaaaa">Captured</span>
+              <span style="font:400 11px/1 'IBM Plex Mono',monospace;color:#e6e6e6">2024-06-11</span>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:8px;padding:18px 20px">
+            <span style="font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#a1c999">M—06 Metadata table</span>
+            <p style="margin:0;font:400 13px/1.6 Raleway,Helvetica,sans-serif;color:#cacaca;text-wrap:pretty">Label left, value right, hairline between. The workhorse — every project gets one instead of a paragraph of specs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="components" data-screen-label="06 Components" style="padding:80px 56px;border-bottom:1px solid oklch(1 0 0 / 0.09)">
+    <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:40px">
+      <div style="display:flex;align-items:baseline;gap:18px">
+        <span style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.18em;color:#a1c999">06</span>
+        <h2 style="margin:0;font:600 34px/1.1 Cabin,Helvetica,sans-serif;letter-spacing:-0.02em">Components</h2>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+        <div style="display:flex;flex-direction:column;gap:18px;padding:26px;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-radius:3px">
+          <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#aaaaaa">Buttons — 44px min height</span>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+            <button style="padding:13px 22px;border:none;border-radius:3px;background:#a1c999;color:#1b1b1b;font:600 13px/1 Cabin,Helvetica,sans-serif;cursor:pointer;transition:background 140ms linear" style-hover="background:#bcd9b6">Let's build something</button>
+            <button style="padding:13px 22px;border:1px solid oklch(1 0 0 / 0.18);border-radius:3px;background:transparent;color:#eaeaea;font:600 13px/1 Cabin,Helvetica,sans-serif;cursor:pointer;transition:background 140ms linear,border-color 140ms linear" style-hover="background:#2e2e2e;border-color:#a1c999">View projects</button>
+            <button style="padding:13px 4px;border:none;background:transparent;color:#a1c999;font:600 12px/1 'IBM Plex Mono',monospace;letter-spacing:0.12em;text-transform:uppercase;cursor:pointer;border-bottom:1px solid rgb(161 201 153 / 0.4);transition:border-color 140ms linear" style-hover="border-color:#a1c999">Copy email →</button>
+          </div>
+          <p style="margin:0;font:400 13px/1.6 Raleway,Helvetica,sans-serif;color:#c8c8c8;text-wrap:pretty">One filled button per view. Labels are verbs in sentence case; the mono variant is for utility actions only.</p>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:18px;padding:26px;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-radius:3px">
+          <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#aaaaaa">Tech tags — mono, pill, tinted by domain</span>
+          <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <span style="padding:6px 11px;border-radius:999px;background:rgb(161 201 153 / 0.13);border:1px solid rgb(161 201 153 / 0.32);font:500 11px/1 'IBM Plex Mono',monospace;color:#bcd9b6">PostGIS</span>
+            <span style="padding:6px 11px;border-radius:999px;background:rgb(161 201 153 / 0.13);border:1px solid rgb(161 201 153 / 0.32);font:500 11px/1 'IBM Plex Mono',monospace;color:#bcd9b6">QGIS</span>
+            <span style="padding:6px 11px;border-radius:999px;background:rgb(161 201 153 / 0.13);border:1px solid rgb(161 201 153 / 0.32);font:500 11px/1 'IBM Plex Mono',monospace;color:#bcd9b6">Mapbox GL</span>
+            <span style="padding:6px 11px;border-radius:999px;background:oklch(1 0 0 / 0.05);border:1px solid oklch(1 0 0 / 0.14);font:500 11px/1 'IBM Plex Mono',monospace;color:#dedede">Next.js</span>
+            <span style="padding:6px 11px;border-radius:999px;background:oklch(1 0 0 / 0.05);border:1px solid oklch(1 0 0 / 0.14);font:500 11px/1 'IBM Plex Mono',monospace;color:#dedede">React</span>
+            <span style="padding:6px 11px;border-radius:999px;background:oklch(1 0 0 / 0.05);border:1px solid oklch(1 0 0 / 0.14);font:500 11px/1 'IBM Plex Mono',monospace;color:#dedede">Python</span>
+            <span style="padding:6px 11px;border-radius:999px;background:rgb(201 161 106 / 0.13);border:1px solid rgb(201 161 106 / 0.30);font:500 11px/1 'IBM Plex Mono',monospace;color:#dcc094">RealityScan</span>
+          </div>
+          <p style="margin:0;font:400 13px/1.6 Raleway,Helvetica,sans-serif;color:#c8c8c8;text-wrap:pretty">Sage marks geospatial tools, clay marks field and capture tools, neutral marks everything else. That split is the whole reason the stack strip is worth reading — cap it at 8 tags per card and link the rest behind a count.</p>
+        </div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:14px">
+        <span style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.18em;text-transform:uppercase;color:#aaaaaa">Project card — 6 columns</span>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+          <div style="display:flex;flex-direction:column;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-radius:3px;overflow:hidden;transition:border-color 160ms linear,background 160ms linear" style-hover="border-color:rgb(161 201 153 / 0.5);background:#2a2a2a">
+            <div style="position:relative;height:180px;background-color:#181818;background-image:linear-gradient(45deg, oklch(1 0 0 / 0.05) 25%, transparent 25% 50%, oklch(1 0 0 / 0.05) 50% 75%, transparent 75%);background-size:22px 22px">
+              <div style="position:absolute;left:0;right:0;top:56%;height:1px;background:rgb(161 201 153 / 0.5)"></div>
+              <div style="position:absolute;top:0;bottom:0;left:34%;width:1px;background:rgb(161 201 153 / 0.5)"></div>
+              <div style="position:absolute;left:34%;top:56%;width:30px;height:30px;margin:-15px 0 0 -15px;border:1px solid #a1c999;border-radius:50%"></div>
+              <span style="position:absolute;left:14px;bottom:12px;font:400 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.1em;color:#bcbcbc">[ project shot — 3:2 ]</span>
+              <span style="position:absolute;right:14px;top:14px;padding:5px 9px;border-radius:999px;background:rgb(27 27 27 / 0.85);font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.1em;color:#a1c999">● live</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:14px;padding:22px">
+              <div style="display:flex;align-items:baseline;justify-content:space-between;gap:16px">
+                <h3 style="margin:0;font:600 24px/1.2 Cabin,Helvetica,sans-serif;letter-spacing:-0.012em">Indie Books Atlas</h3>
+                <span style="font:400 11px/1 'IBM Plex Mono',monospace;color:#c9a16a">Canada</span>
+              </div>
+              <p style="margin:0;font:400 14px/1.6 Raleway,Helvetica,sans-serif;color:#cecece;text-wrap:pretty">A live map of Canada's independently owned bookstores — independents only, no chains, no campus shops. A Python pipeline pulls candidates from OpenStreetMap, enriches them from store sites, and writes to PostGIS; the front end queries it live rather than shipping a static extract.</p>
+              <div style="display:flex;flex-direction:column;gap:7px;padding:12px 0;border-top:1px solid oklch(1 0 0 / 0.08);border-bottom:1px solid oklch(1 0 0 / 0.08)">
+                <div style="display:flex;justify-content:space-between"><span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.14em;text-transform:uppercase;color:#aaaaaa">Mapped</span><span style="font:400 11px/1 'IBM Plex Mono',monospace">791 stores</span></div>
+                <div style="display:flex;justify-content:space-between"><span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.14em;text-transform:uppercase;color:#aaaaaa">Records</span><span style="font:400 11px/1 'IBM Plex Mono',monospace">completeness-scored</span></div>
+              </div>
+              <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <span style="padding:6px 11px;border-radius:999px;background:rgb(161 201 153 / 0.13);border:1px solid rgb(161 201 153 / 0.32);font:500 11px/1 'IBM Plex Mono',monospace;color:#bcd9b6">PostGIS</span>
+                <span style="padding:6px 11px;border-radius:999px;background:rgb(161 201 153 / 0.13);border:1px solid rgb(161 201 153 / 0.32);font:500 11px/1 'IBM Plex Mono',monospace;color:#bcd9b6">Mapbox GL</span>
+                <span style="padding:6px 11px;border-radius:999px;background:oklch(1 0 0 / 0.05);border:1px solid oklch(1 0 0 / 0.14);font:500 11px/1 'IBM Plex Mono',monospace;color:#dedede">Next.js</span>
+                <span style="padding:6px 11px;border-radius:999px;background:oklch(1 0 0 / 0.05);border:1px solid oklch(1 0 0 / 0.14);font:500 11px/1 'IBM Plex Mono',monospace;color:#dedede">Supabase</span>
+              </div>
+              <a href="#components" style="font:600 12px/1 'IBM Plex Mono',monospace;letter-spacing:0.12em;text-transform:uppercase;color:#a1c999">Read more →</a>
+            </div>
+          </div>
+
+          <div style="display:flex;flex-direction:column;gap:20px">
+            <div style="display:flex;flex-direction:column;gap:12px;padding:22px;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-radius:3px">
+              <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#aaaaaa">Anatomy</span>
+              <div style="display:flex;flex-direction:column;gap:9px">
+                <div style="display:flex;gap:12px"><span style="font:400 11px/1.5 'IBM Plex Mono',monospace;color:#a1c999;min-width:22px">01</span><span style="font:400 13px/1.5 Raleway,Helvetica,sans-serif;color:#d2d2d2">Media at 3:2 with one survey mark and a status pill</span></div>
+                <div style="display:flex;gap:12px"><span style="font:400 11px/1.5 'IBM Plex Mono',monospace;color:#a1c999;min-width:22px">02</span><span style="font:400 13px/1.5 Raleway,Helvetica,sans-serif;color:#d2d2d2">Title (H2) with a real scope or count in clay mono — cv.json has no project dates, so don't print one</span></div>
+                <div style="display:flex;gap:12px"><span style="font:400 11px/1.5 'IBM Plex Mono',monospace;color:#a1c999;min-width:22px">03</span><span style="font:400 13px/1.5 Raleway,Helvetica,sans-serif;color:#d2d2d2">Two sentences maximum — what it is, what it's built on</span></div>
+                <div style="display:flex;gap:12px"><span style="font:400 11px/1.5 'IBM Plex Mono',monospace;color:#a1c999;min-width:22px">04</span><span style="font:400 13px/1.5 Raleway,Helvetica,sans-serif;color:#d2d2d2">Metadata table — two rows from cv.json that only this project could claim</span></div>
+                <div style="display:flex;gap:12px"><span style="font:400 11px/1.5 'IBM Plex Mono',monospace;color:#a1c999;min-width:22px">05</span><span style="font:400 13px/1.5 Raleway,Helvetica,sans-serif;color:#d2d2d2">Stack tags, then a single mono link</span></div>
+              </div>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:12px;padding:22px;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-radius:3px">
+              <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#aaaaaa">Why this beats the current card</span>
+              <p style="margin:0;font:400 14px/1.6 Raleway,Helvetica,sans-serif;color:#d0d0d0;text-wrap:pretty">Today's cards give a title and a wall of eight tags, so every project reads the same. The metadata rows are the differentiator, and cv.json already holds them: 791 stores mapped, completeness-scored records, a headframe that has since collapsed, years of QGIS layers staged before commit. Two facts turn a portfolio item into evidence.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+        <div style="display:flex;flex-direction:column;gap:16px;padding:26px;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-radius:3px">
+          <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#aaaaaa">Experience row — 4-col gutter, 8-col body</span>
+          <div style="display:grid;grid-template-columns:150px 1fr;gap:22px;padding-top:18px;border-top:1px solid oklch(1 0 0 / 0.10)">
+            <div style="display:flex;flex-direction:column;gap:7px">
+              <span style="font:500 12px/1.3 'IBM Plex Mono',monospace;color:#c9a16a">2024 — Present</span>
+              <span style="font:400 10px/1.4 'IBM Plex Mono',monospace;letter-spacing:0.12em;text-transform:uppercase;color:#aaaaaa">Founder<br />&amp; lead pilot</span>
+            </div>
+            <div style="display:flex;flex-direction:column;gap:11px">
+              <h3 style="margin:0;font:600 20px/1.25 Cabin,Helvetica,sans-serif;letter-spacing:-0.01em">Northern Venture Drone Services</h3>
+              <p style="margin:0;font:400 14px/1.6 Raleway,Helvetica,sans-serif;color:#cecece;text-wrap:pretty">Aerial surveys, photogrammetric mapping, and infrastructure inspection across construction, utilities, mining, forestry, and heritage.</p>
+              <div style="display:flex;flex-wrap:wrap;gap:8px">
+                <span style="padding:5px 10px;border-radius:999px;background:oklch(1 0 0 / 0.05);border:1px solid oklch(1 0 0 / 0.14);font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.08em;color:#dadada">TC ADVANCED OPS</span>
+                <span style="padding:5px 10px;border-radius:999px;background:oklch(1 0 0 / 0.05);border:1px solid oklch(1 0 0 / 0.14);font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.08em;color:#dadada">PHOTOGRAMMETRY</span>
+              </div>
+            </div>
+          </div>
+          <p style="margin:0;font:400 13px/1.6 Raleway,Helvetica,sans-serif;color:#c6c6c6;text-wrap:pretty">Dates and role in the mono gutter, prose in the body, credentials as tags. Three bullets maximum per role — the current page runs five and the strongest one gets buried.</p>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:16px;padding:26px;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-radius:3px">
+          <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#aaaaaa">Form fields</span>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <label style="display:flex;flex-direction:column;gap:7px">
+              <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#aaaaaa">Full name</span>
+              <input value="{{ nameValue }}" onChange="{{ onName }}" placeholder="Dana Whitfield" style="width:100%;padding:13px 14px;background:#181818;border:1px solid oklch(1 0 0 / 0.14);border-radius:3px;color:#eaeaea;font:400 14px/1.2 Raleway,Helvetica,sans-serif;outline:none;transition:border-color 140ms linear" style-focus="border-color:#a1c999" />
+            </label>
+            <label style="display:flex;flex-direction:column;gap:7px">
+              <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#aaaaaa">Message</span>
+              <textarea placeholder="What are you trying to map, build, or document?" rows="3" style="width:100%;padding:13px 14px;background:#181818;border:1px solid oklch(1 0 0 / 0.14);border-radius:3px;color:#eaeaea;font:400 14px/1.5 Raleway,Helvetica,sans-serif;outline:none;resize:vertical;transition:border-color 140ms linear" style-focus="border-color:#a1c999"></textarea>
+            </label>
+            <div style="display:flex;align-items:center;gap:14px">
+              <button style="padding:13px 22px;border:none;border-radius:3px;background:#a1c999;color:#1b1b1b;font:600 13px/1 Cabin,Helvetica,sans-serif;cursor:pointer">Send</button>
+              <span style="font:400 11px/1.4 'IBM Plex Mono',monospace;color:#aaaaaa">or hello@davebeach.me</span>
+            </div>
+          </div>
+          <p style="margin:0;font:400 13px/1.6 Raleway,Helvetica,sans-serif;color:#c6c6c6;text-wrap:pretty">Mono labels above the field, never inside it. Placeholders show a real example, not a repeat of the label. Errors sit below in clay mono, 12px.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="motion" data-screen-label="07 Motion" style="padding:80px 56px;border-bottom:1px solid oklch(1 0 0 / 0.09)">
+    <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:36px">
+      <div style="display:flex;align-items:baseline;gap:18px">
+        <span style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.18em;color:#a1c999">07</span>
+        <h2 style="margin:0;font:600 34px/1.1 Cabin,Helvetica,sans-serif;letter-spacing:-0.02em">Motion</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:20px">
+        <div style="display:flex;flex-direction:column;gap:12px;padding:22px;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-radius:3px">
+          <span style="font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.14em;text-transform:uppercase;color:#a1c999">120–160ms</span>
+          <h3 style="margin:0;font:600 17px/1.3 Cabin,Helvetica,sans-serif">Hover &amp; focus</h3>
+          <p style="margin:0;font:400 13px/1.6 Raleway,Helvetica,sans-serif;color:#cacaca;text-wrap:pretty">Linear. Border color, background, and underline only — no lift, no scale.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;padding:22px;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-radius:3px">
+          <span style="font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.14em;text-transform:uppercase;color:#a1c999">240ms</span>
+          <h3 style="margin:0;font:600 17px/1.3 Cabin,Helvetica,sans-serif">Reveal on scroll</h3>
+          <p style="margin:0;font:400 13px/1.6 Raleway,Helvetica,sans-serif;color:#cacaca;text-wrap:pretty">cubic-bezier(.2,.6,.2,1). Opacity 0→1 with a 12px rise. 40ms stagger, capped at 4 items.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;padding:22px;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-radius:3px">
+          <span style="font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.14em;text-transform:uppercase;color:#a1c999">2.6s loop</span>
+          <h3 style="margin:0;font:600 17px/1.3 Cabin,Helvetica,sans-serif">Ambient</h3>
+          <p style="margin:0;font:400 13px/1.6 Raleway,Helvetica,sans-serif;color:#cacaca;text-wrap:pretty">Only the live ping and the terminal caret. One ambient loop per viewport, ever.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;padding:22px;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-radius:3px">
+          <span style="font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.14em;text-transform:uppercase;color:#c9a16a">Reduced</span>
+          <h3 style="margin:0;font:600 17px/1.3 Cabin,Helvetica,sans-serif">Motion off</h3>
+          <p style="margin:0;font:400 13px/1.6 Raleway,Helvetica,sans-serif;color:#cacaca;text-wrap:pretty">prefers-reduced-motion drops every loop and reveal to a plain fade. Nothing is load-bearing.</p>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;gap:20px;padding:22px 26px;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-radius:3px">
+        <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#aaaaaa;min-width:120px">Loading</span>
+        <div style="position:relative;flex:1;height:46px;overflow:hidden;border:1px solid oklch(1 0 0 / 0.1);border-radius:3px;background:#1b1b1b">
+          <div style="position:absolute;left:0;right:0;height:8px;background:linear-gradient(rgb(161 201 153 / 0.55), transparent);animation:dbScan 1.9s linear infinite"></div>
+        </div>
+        <p style="margin:0;max-width:420px;font:400 13px/1.6 Raleway,Helvetica,sans-serif;color:#cacaca;text-wrap:pretty">The site's current "Loading…" text becomes a scan sweep across the hero frame — a rendering pass, not a spinner.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="applied" data-screen-label="08 Applied hero" style="padding:80px 56px;border-bottom:1px solid oklch(1 0 0 / 0.09)">
+    <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:28px">
+      <div style="display:flex;align-items:baseline;gap:18px;flex-wrap:wrap">
+        <span style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.18em;color:#a1c999">08</span>
+        <h2 style="margin:0;font:600 34px/1.1 Cabin,Helvetica,sans-serif;letter-spacing:-0.02em">Applied — hero</h2>
+        <p style="margin:0 0 0 auto;max-width:440px;font:400 14px/1.6 Raleway,Helvetica,sans-serif;color:#c6c6c6;text-wrap:pretty">The system assembled: contour motif, one filled button, a live status rail, and the location block folded into the hero instead of sitting in its own section.</p>
+      </div>
+
+      <div style="position:relative;border:1px solid oklch(1 0 0 / 0.10);border-radius:3px;overflow:hidden;background:#1b1b1b">
+        <div style="position:absolute;inset:0;pointer-events:none;background-image:repeating-radial-gradient(circle at 86% 22%, transparent 0 26px, rgb(161 201 153 / 0.16) 26px 27px),repeating-radial-gradient(circle at 96% 78%, transparent 0 38px, rgb(201 161 106 / 0.11) 38px 39px)"></div>
+        <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(100deg, #1b1b1b 0%, rgb(27 27 27 / 0.9) 46%, transparent 82%)"></div>
+
+        <div style="position:relative;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 32px;height:52px;border-bottom:1px solid oklch(1 0 0 / 0.09)">
+          <span style="font:600 13px/1 Cabin,Helvetica,sans-serif;letter-spacing:-0.01em">Dave Beach</span>
+          <div style="display:flex;align-items:center;gap:22px">
+            <span style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.14em;text-transform:uppercase;color:#eaeaea;border-bottom:1px solid #a1c999;padding-bottom:3px">Home</span>
+            <span style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.14em;text-transform:uppercase;color:#b4b4b4;white-space:nowrap;flex:0 0 auto">About</span>
+            <span style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.14em;text-transform:uppercase;color:#b4b4b4;white-space:nowrap;flex:0 0 auto">Projects</span>
+            <span style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.14em;text-transform:uppercase;color:#b4b4b4;white-space:nowrap;flex:0 0 auto">Experience</span>
+            <span style="padding:8px 14px;border-radius:3px;background:#a1c999;color:#1b1b1b;font:600 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.1em;text-transform:uppercase">Contact</span>
+          </div>
+        </div>
+
+        <div style="position:relative;padding:72px 32px 32px;display:flex;flex-direction:column;gap:30px">
+          <div style="display:flex;align-items:center;gap:12px">
+            <span style="position:relative;display:inline-flex;width:8px;height:8px"><span style="position:absolute;inset:0;border-radius:50%;background:#a1c999"></span><span style="position:absolute;inset:0;border-radius:50%;border:1px solid #a1c999;animation:dbPing 2.6s ease-out infinite"></span></span>
+            <span style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.18em;text-transform:uppercase;color:#c2c2c2">Kitchener, ON — {{ clock }} — open to remote work</span>
+          </div>
+          <h1 style="margin:0;font:700 66px/0.96 Cabin,Helvetica,sans-serif;letter-spacing:-0.035em;max-width:820px;text-wrap:balance">Crafting code,<br />mapping data,<br />telling stories.</h1>
+          <p style="margin:0;max-width:560px;font:400 18px/1.62 Raleway,Helvetica,sans-serif;color:#d4d4d4;text-wrap:pretty">Software engineering and geospatial practice, applied to documenting the world around us — tools, visualizations, and datasets that hold up in the field and in production.</p>
+          <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+            <button style="padding:14px 24px;border:none;border-radius:3px;background:#a1c999;color:#1b1b1b;font:600 14px/1 Cabin,Helvetica,sans-serif;cursor:pointer;transition:background 140ms linear" style-hover="background:#bcd9b6">Let's build something</button>
+            <button style="padding:14px 24px;border:1px solid oklch(1 0 0 / 0.18);border-radius:3px;background:transparent;color:#eaeaea;font:600 14px/1 Cabin,Helvetica,sans-serif;cursor:pointer;transition:background 140ms linear,border-color 140ms linear" style-hover="background:#2e2e2e;border-color:#a1c999">See the work</button>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:oklch(1 0 0 / 0.09);border:1px solid oklch(1 0 0 / 0.09);margin-top:16px">
+            <div style="background:#212121;padding:16px 18px;display:flex;flex-direction:column;gap:7px">
+              <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#aaaaaa">Now</span>
+              <span style="font:500 13px/1.3 'IBM Plex Mono',monospace">Northern Venture</span>
+            </div>
+            <div style="background:#212121;padding:16px 18px;display:flex;flex-direction:column;gap:7px">
+              <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#aaaaaa">Shipping since</span>
+              <span style="font:500 13px/1.3 'IBM Plex Mono',monospace">2006</span>
+            </div>
+            <div style="background:#212121;padding:16px 18px;display:flex;flex-direction:column;gap:7px">
+              <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#aaaaaa">Certification</span>
+              <span style="font:500 13px/1.3 'IBM Plex Mono',monospace">TC Advanced Ops</span>
+            </div>
+            <div style="background:#212121;padding:16px 18px;display:flex;flex-direction:column;gap:7px">
+              <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#aaaaaa">Contact</span>
+              <span style="font:500 13px/1.3 'IBM Plex Mono',monospace;color:#a1c999">hello@davebeach.me</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="departures" data-screen-label="09 Departures" style="padding:80px 56px;border-bottom:1px solid oklch(1 0 0 / 0.09)">
+    <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:36px">
+      <div style="display:flex;align-items:baseline;gap:18px;flex-wrap:wrap">
+        <span style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.18em;color:#a1c999">09</span>
+        <h2 style="margin:0;font:600 34px/1.1 Cabin,Helvetica,sans-serif;letter-spacing:-0.02em">Departures from the shipped site</h2>
+        <p style="margin:0 0 0 auto;max-width:470px;font:400 14px/1.6 Raleway,Helvetica,sans-serif;color:#c6c6c6;text-wrap:pretty">Colour and type above are the tokens already in <code style="font:400 13px/1 'IBM Plex Mono',monospace;color:#a1c999">global.css</code>. These five are real changes — each one is a proposal, not a description of what exists today.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px">
+        <div style="display:flex;flex-direction:column;gap:12px;padding:24px;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-top:2px solid #c9a16a;border-radius:3px">
+          <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#aaaaaa">D—01 Radius</span>
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:52px;height:36px;background:#333333;border:1px solid oklch(1 0 0 / 0.12);border-radius:16px"></div>
+            <span style="font:400 16px/1 'IBM Plex Mono',monospace;color:#aaaaaa">→</span>
+            <div style="width:52px;height:36px;background:#333333;border:1px solid oklch(1 0 0 / 0.12);border-radius:3px"></div>
+          </div>
+          <p style="margin:0;font:400 13px/1.6 Raleway,Helvetica,sans-serif;color:#cacaca;text-wrap:pretty">Today: <code style="font:400 12px/1 'IBM Plex Mono',monospace">rounded-2xl</code> cards, <code style="font:400 12px/1 'IBM Plex Mono',monospace">rounded-full</code> buttons, <code style="font:400 12px/1 'IBM Plex Mono',monospace">rounded-md</code> inputs. Proposed: a flat 3px everywhere, pills reserved for tags. Soft corners read consumer-app; drawing sheets have square ones.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;padding:24px;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-top:2px solid #c9a16a;border-radius:3px">
+          <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#aaaaaa">D—02 Third accent</span>
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:52px;height:36px;background:#ffd166;border-radius:3px"></div>
+            <span style="font:400 16px/1 'IBM Plex Mono',monospace;color:#aaaaaa">→</span>
+            <div style="width:52px;height:36px;background:#c9a16a;border-radius:3px"></div>
+          </div>
+          <p style="margin:0;font:400 13px/1.6 Raleway,Helvetica,sans-serif;color:#cacaca;text-wrap:pretty">Today: <code style="font:400 12px/1 'IBM Plex Mono',monospace">--color-accent #ffd166</code> is a third hue at higher chroma than either sibling. Proposed: retire it and let secondary carry those moments, so the palette holds one lightness and one chroma.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;padding:24px;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-top:2px solid #c9a16a;border-radius:3px">
+          <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#aaaaaa">D—03 Gradient fills</span>
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:52px;height:36px;background:linear-gradient(#a1c999,#748c6e);border-radius:3px"></div>
+            <span style="font:400 16px/1 'IBM Plex Mono',monospace;color:#aaaaaa">→</span>
+            <div style="width:52px;height:36px;background:#242424;border:1px solid rgb(161 201 153 / 0.5);border-radius:3px"></div>
+          </div>
+          <p style="margin:0;font:400 13px/1.6 Raleway,Helvetica,sans-serif;color:#cacaca;text-wrap:pretty">Today: <code style="font:400 12px/1 'IBM Plex Mono',monospace">.grid-default-color</code> fills about cards with a primary→#748c6e gradient. Proposed: flat surface plus a hairline, accent kept for marks and type. It also fixes contrast — dark text on a shifting green is unpredictable.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;padding:24px;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-top:2px solid #c9a16a;border-radius:3px">
+          <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#aaaaaa">D—04 A mono face</span>
+          <div style="display:flex;align-items:baseline;gap:10px">
+            <span style="font:400 22px/1 Raleway,Helvetica,sans-serif;color:#cccccc">2.4 cm/px</span>
+            <span style="font:400 16px/1 'IBM Plex Mono',monospace;color:#aaaaaa">→</span>
+            <span style="font:500 22px/1 'IBM Plex Mono',monospace;color:#a1c999">2.4 cm/px</span>
+          </div>
+          <p style="margin:0;font:400 13px/1.6 Raleway,Helvetica,sans-serif;color:#cacaca;text-wrap:pretty">Today: two faces, no mono — every figure and coordinate is set in Raleway. Proposed: add IBM Plex Mono as a third family. It is the single change that does most of the work in the brief, and it costs one <code style="font:400 12px/1 'IBM Plex Mono',monospace">@fontsource-variable</code> package.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;padding:24px;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-top:2px solid #c9a16a;border-radius:3px">
+          <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#aaaaaa">D—05 Section rhythm</span>
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:52px;height:36px;background:#333333;border-radius:3px;display:flex;align-items:center;justify-content:center"><span style="font:400 9px/1 'IBM Plex Mono',monospace;color:#aaaaaa">100vh</span></div>
+            <span style="font:400 16px/1 'IBM Plex Mono',monospace;color:#aaaaaa">→</span>
+            <div style="width:52px;height:36px;background:#333333;border-radius:3px;display:flex;align-items:center;justify-content:center"><span style="font:400 9px/1 'IBM Plex Mono',monospace;color:#aaaaaa">80px</span></div>
+          </div>
+          <p style="margin:0;font:400 13px/1.6 Raleway,Helvetica,sans-serif;color:#cacaca;text-wrap:pretty">Today: <code style="font:400 12px/1 'IBM Plex Mono',monospace">.section-spacing</code> pins every section to <code style="font:400 12px/1 'IBM Plex Mono',monospace">min-h-screen</code>. Proposed: 80px padding and a hairline, so a section is exactly as tall as its content — and a thin section reads as a prompt to write more, not as designed emptiness.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;padding:24px;background:#1f1f1f;border:1px solid oklch(1 0 0 / 0.08);border-radius:3px">
+          <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#aaaaaa">Unchanged</span>
+          <p style="margin:0;font:400 13px/1.6 Raleway,Helvetica,sans-serif;color:#cacaca;text-wrap:pretty">Primary, secondary, base-100, and both text colours; Cabin and Raleway; the Tailwind 4px spacing base; <code style="font:400 12px/1 'IBM Plex Mono',monospace">.c-space</code> page margins; content driven from <code style="font:400 12px/1 'IBM Plex Mono',monospace">cv.json</code>; the GSAP timeline and the Three.js hero — the shader Earth is the site's best asset and the survey-mark motif is built to frame it, not replace it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="rules" data-screen-label="10 Rules" style="padding:80px 56px">
+    <div style="max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:36px">
+      <div style="display:flex;align-items:baseline;gap:18px">
+        <span style="font:500 11px/1 'IBM Plex Mono',monospace;letter-spacing:0.18em;color:#a1c999">10</span>
+        <h2 style="margin:0;font:600 34px/1.1 Cabin,Helvetica,sans-serif;letter-spacing:-0.02em">Rules of thumb</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+        <div style="display:flex;flex-direction:column;gap:12px;padding:26px;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-top:2px solid #a1c999;border-radius:3px">
+          <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#aaaaaa">Do</span>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <span style="font:400 14px/1.55 Raleway,Helvetica,sans-serif;color:#dadada">Give every project two numbers only it could claim.</span>
+            <span style="font:400 14px/1.55 Raleway,Helvetica,sans-serif;color:#dadada">Let sage mean geospatial and clay mean field capture, everywhere.</span>
+            <span style="font:400 14px/1.55 Raleway,Helvetica,sans-serif;color:#dadada">Caption every image placeholder with what belongs there.</span>
+            <span style="font:400 14px/1.55 Raleway,Helvetica,sans-serif;color:#dadada">Keep one filled button and one ambient loop per viewport.</span>
+            <span style="font:400 14px/1.55 Raleway,Helvetica,sans-serif;color:#dadada">Separate sections with a hairline and 80px of air.</span>
+          </div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:12px;padding:26px;background:#242424;border:1px solid oklch(1 0 0 / 0.08);border-top:2px solid #c9a16a;border-radius:3px">
+          <span style="font:500 10px/1 'IBM Plex Mono',monospace;letter-spacing:0.16em;text-transform:uppercase;color:#aaaaaa">Don't</span>
+          <div style="display:flex;flex-direction:column;gap:10px">
+            <span style="font:400 14px/1.55 Raleway,Helvetica,sans-serif;color:#dadada">Don't run a 24-logo tech wall — name the tools that matter per project.</span>
+            <span style="font:400 14px/1.55 Raleway,Helvetica,sans-serif;color:#dadada">Don't use ramp colors for UI, or accent colors for data.</span>
+            <span style="font:400 14px/1.55 Raleway,Helvetica,sans-serif;color:#dadada">Don't add shadows, glows, or gradient headlines.</span>
+            <span style="font:400 14px/1.55 Raleway,Helvetica,sans-serif;color:#dadada">Don't stack more than two motifs on one screen.</span>
+            <span style="font:400 14px/1.55 Raleway,Helvetica,sans-serif;color:#dadada">Don't let a section exist without something specific to say.</span>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:24px;padding-top:28px;border-top:1px solid oklch(1 0 0 / 0.09)">
+        <span style="font:400 11px/1.5 'IBM Plex Mono',monospace;color:#aaaaaa">davebeach.me — style guide v1.0 — 2026.08</span>
+        <span style="font:400 11px/1.5 'IBM Plex Mono',monospace;color:#aaaaaa">Cabin / Raleway / IBM Plex Mono — tokens from global.css</span>
+      </div>
+    </div>
+  </section>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+class Component extends DCLogic {
+  state = { termLen: 0, clock: "", nameValue: "" };
+
+  componentDidMount() {
+    this.cmd = "ogr2ogr -f PostgreSQL sites.gpkg";
+    this.tick = setInterval(() => {
+      this.setState(s => ({ termLen: s.termLen >= this.cmd.length ? 0 : s.termLen + 1 }));
+    }, 130);
+    this.setClock();
+    this.clockTick = setInterval(() => this.setClock(), 30000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.tick);
+    clearInterval(this.clockTick);
+  }
+
+  setClock() {
+    try {
+      const t = new Date().toLocaleTimeString("en-CA", { timeZone: "America/Toronto", hour: "2-digit", minute: "2-digit", hour12: false });
+      this.setState({ clock: t + " EDT" });
+    } catch (e) {
+      this.setState({ clock: "—" });
+    }
+  }
+
+  renderVals() {
+    return {
+      termLine: (this.cmd || "").slice(0, this.state.termLen),
+      clock: this.state.clock,
+      nameValue: this.state.nameValue,
+      onName: e => this.setState({ nameValue: e.target.value })
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -48,6 +48,6 @@ export function Frameworks() {
   );
 }
 
-const Icon = ({ src }) => (
+const Icon = ({ src }: { src: string }) => (
   <img src={src} className="duration-200 rounded-sm hover:scale-110" />
 );

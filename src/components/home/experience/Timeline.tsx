@@ -2,7 +2,20 @@
 import { useScroll, useTransform, motion } from 'motion/react';
 import { useEffect, useRef, useState } from 'react';
 
-export const Timeline = ({ data }) => {
+interface TimelineProps {
+  data: Array<{
+    domain: string;
+    experience: Array<{
+      date: string;
+      position: string;
+      name: string;
+      summary?: string;
+      responsibilities: string[];
+    }>;
+  }>;
+}
+
+export const Timeline = ({ data }: TimelineProps) => {
   const ref = useRef(null);
   const containerRef = useRef(null);
   const [height, setHeight] = useState(0);

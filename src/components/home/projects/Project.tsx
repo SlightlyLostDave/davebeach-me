@@ -1,6 +1,14 @@
 import { Icon, loadIcons } from '@iconify/react';
 
-const Project = ({ title, slug, image, tags, setPreview }) => {
+interface ProjectProps {
+  title: string;
+  slug: string;
+  image: string;
+  tags: Array<{ id: string | number; name: string }>;
+  setPreview: (image: string | null) => void;
+}
+
+const Project = ({ title, slug, image, tags, setPreview }: ProjectProps) => {
   loadIcons(['mdi:arrow-right-thick']);
 
   return (

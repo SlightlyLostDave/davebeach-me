@@ -35,11 +35,16 @@ const GLOBE_CONFIG = {
   ],
 };
 
-export function Globe({ className, config = GLOBE_CONFIG }) {
+interface GlobeProps {
+  className?: string;
+  config?: typeof GLOBE_CONFIG;
+}
+
+export function Globe({ className, config = GLOBE_CONFIG }: GlobeProps) {
   let phi = 0;
   let width = 0;
-  const canvasRef = useRef(null);
-  const pointerInteracting = useRef(null);
+  const canvasRef = useRef<HTMLCanvasElement>(null);
+  const pointerInteracting = useRef<number | null>(null);
   const pointerInteractionMovement = useRef(0);
 
   const r = useMotionValue(0);
@@ -49,14 +54,14 @@ export function Globe({ className, config = GLOBE_CONFIG }) {
     stiffness: 100,
   });
 
-  const updatePointerInteraction = (value) => {
+  const updatePointerInteraction = (value: number | null) => {
     pointerInteracting.current = value;
     if (canvasRef.current) {
       canvasRef.current.style.cursor = value !== null ? 'grabbing' : 'grab';
     }
   };
 
-  const updateMovement = (clientX) => {
+  const updateMovement = (clientX: number) => {
     if (pointerInteracting.current !== null) {
       const delta = clientX - pointerInteracting.current;
       pointerInteractionMovement.current = delta;

@@ -1,6 +1,11 @@
 import { Icon, loadIcons } from '@iconify/react';
 
-const ProjectTagsAndLinks = ({ tags, links }) => {
+interface ProjectTagsAndLinksProps {
+  tags: Array<{ name: string; icon: string }>;
+  links: Array<{ label: string; url: string }>;
+}
+
+const ProjectTagsAndLinks = ({ tags, links }: ProjectTagsAndLinksProps) => {
   loadIcons(tags.map((tag) => tag.icon));
 
   return (

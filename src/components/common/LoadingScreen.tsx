@@ -1,6 +1,10 @@
 import { useEffect, useState } from 'react';
 
-const LoadingScreen = ({ isVisible }) => {
+interface LoadingScreenProps {
+  isVisible: boolean;
+}
+
+const LoadingScreen = ({ isVisible }: LoadingScreenProps) => {
   return (
     <div
       className={`fixed inset-0 flex items-center justify-center bg-black z-50 transition-opacity duration-500 ${
