@@ -1,6 +1,18 @@
-# davebeach.me
+<div align="center">
+  <a href="https://davebeach.me">
+    <picture>
+      <source media="(prefers-color-scheme: dark)" srcset="https://www.davebeach.me/logo.svg">
+      <img alt="Next.js logo" src="https://www.davebeach.me/logo-light.svg" height="128">
+    </picture>
+  </a>
+  <h1>DaveBeach.me</h1>
 
-My personal portfolio site — built with [Astro](https://astro.build) and React, featuring a shader-driven 3D Earth hero, an interactive globe, and a CV-driven content system.
+<a href="https://www.npmjs.com/package/next"><img alt="NPM version" src="https://img.shields.io/npm/v/next.svg?style=for-the-badge&labelColor=000000"></a>
+<img alt="License" src="https://img.shields.io/github/license/SlightlyLostDave/davebeach-me?style=for-the-badge">
+
+</div>
+
+My personal portfolio site, built with [Astro](https://astro.build) and React, featuring a shader-driven 3D Earth hero, an interactive globe, and a CV-driven content system.
 
 **[davebeach.me →](https://davebeach.me)**
 
